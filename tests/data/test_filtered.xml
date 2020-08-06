@@ -1,0 +1,1546 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection><record xmlns="http://www.loc.gov/MARC21/slim" type="Bibliographic">
+    <leader>00000pam a2200000 c 4500</leader>
+    <controlfield tag="001">1000001539</controlfield>
+    <controlfield tag="003">DE-101</controlfield>
+    <controlfield tag="005">20171202132529.0</controlfield>
+    <controlfield tag="007">tu</controlfield>
+    <controlfield tag="008">100204s2010    gw ||||| |||| 00||||ger  </controlfield>
+    <datafield tag="015" ind1=" " ind2=" ">
+      <subfield code="a">10,A08</subfield>
+      <subfield code="z">10,N06</subfield>
+      <subfield code="2">dnb</subfield>
+    </datafield>
+    <datafield tag="016" ind1="7" ind2=" ">
+      <subfield code="2">DE-101</subfield>
+      <subfield code="a">1000001539</subfield>
+    </datafield>
+    <datafield tag="020" ind1=" " ind2=" ">
+      <subfield code="a">9783981347104</subfield>
+      <subfield code="c">geh. : EUR 9.95</subfield>
+      <subfield code="9">978-3-9813471-0-4</subfield>
+    </datafield>
+    <datafield tag="024" ind1="3" ind2=" ">
+      <subfield code="a">9783981347104</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(DE-599)DNB1000001539</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(OCoLC)530224829</subfield>
+    </datafield>
+    <datafield tag="040" ind1=" " ind2=" ">
+      <subfield code="a">1245</subfield>
+      <subfield code="b">ger</subfield>
+      <subfield code="c">DE-101</subfield>
+      <subfield code="d">9999</subfield>
+    </datafield>
+    <datafield tag="041" ind1=" " ind2=" ">
+      <subfield code="a">ger</subfield>
+    </datafield>
+    <datafield tag="044" ind1=" " ind2=" ">
+      <subfield code="c">XA-DE-BY</subfield>
+    </datafield>
+    <datafield tag="082" ind1="0" ind2="4">
+      <subfield code="8">1\u</subfield>
+      <subfield code="a">551.57848</subfield>
+      <subfield code="q">DE-101</subfield>
+      <subfield code="2">22/ger</subfield>
+    </datafield>
+    <datafield tag="083" ind1="7" ind2=" ">
+      <subfield code="a">550</subfield>
+      <subfield code="a">796</subfield>
+      <subfield code="q">DE-101</subfield>
+      <subfield code="2">22sdnb</subfield>
+    </datafield>
+    <datafield tag="085" ind1=" " ind2=" ">
+      <subfield code="8">1\u</subfield>
+      <subfield code="b">551.57848</subfield>
+    </datafield>
+    <datafield tag="090" ind1=" " ind2=" ">
+      <subfield code="a">b</subfield>
+    </datafield>
+    <datafield tag="100" ind1="1" ind2=" ">
+      <subfield code="0">(DE-588)124600514</subfield>
+      <subfield code="0">https://d-nb.info/gnd/124600514</subfield>
+      <subfield code="0">(DE-101)124600514</subfield>
+      <subfield code="a">Durner, Günter</subfield>
+      <subfield code="d">1965-</subfield>
+      <subfield code="e">Verfasser</subfield>
+      <subfield code="4">aut</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="245" ind1="1" ind2="0">
+      <subfield code="a">Lawinen-Know-How</subfield>
+      <subfield code="b">der Bergführer rät ...</subfield>
+      <subfield code="c">Günter Durner</subfield>
+    </datafield>
+    <datafield tag="250" ind1=" " ind2=" ">
+      <subfield code="a">3., überarb. Aufl.</subfield>
+    </datafield>
+    <datafield tag="259" ind1=" " ind2=" ">
+      <subfield code="a">13</subfield>
+    </datafield>
+    <datafield tag="264" ind1=" " ind2="1">
+      <subfield code="a">[Garmisch-Partenkirchen]</subfield>
+      <subfield code="b">AM-Berg-Verl.</subfield>
+      <subfield code="c">2010</subfield>
+    </datafield>
+    <datafield tag="300" ind1=" " ind2=" ">
+      <subfield code="a">72 S.</subfield>
+      <subfield code="b">Ill., graph. Darst.</subfield>
+      <subfield code="c">18 cm, 130 gr.</subfield>
+    </datafield>
+    <datafield tag="336" ind1=" " ind2=" ">
+      <subfield code="a">Text</subfield>
+      <subfield code="b">txt</subfield>
+      <subfield code="2">rdacontent</subfield>
+    </datafield>
+    <datafield tag="337" ind1=" " ind2=" ">
+      <subfield code="a">ohne Hilfsmittel zu benutzen</subfield>
+      <subfield code="b">n</subfield>
+      <subfield code="2">rdamedia</subfield>
+    </datafield>
+    <datafield tag="338" ind1=" " ind2=" ">
+      <subfield code="a">Band</subfield>
+      <subfield code="b">nc</subfield>
+      <subfield code="2">rdacarrier</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="7">
+      <subfield code="0">(DE-588)4034792-8</subfield>
+      <subfield code="0">https://d-nb.info/gnd/4034792-8</subfield>
+      <subfield code="0">(DE-101)040347923</subfield>
+      <subfield code="a">Lawine</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="7">
+      <subfield code="0">(DE-588)4166970-8</subfield>
+      <subfield code="0">https://d-nb.info/gnd/4166970-8</subfield>
+      <subfield code="0">(DE-101)041669703</subfield>
+      <subfield code="a">Lawinenunfall</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">(VLB-FS)Lawine</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">(VLB-FS)Ski</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">(VLB-FS)Bergsteigen</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">(VLB-FS)Skitour</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">(VLB-PF)BF: Geheftet</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">(VLB-WN)1444: Hardcover, Softcover / Ratgeber/Sport/Wintersport</subfield>
+    </datafield>
+    <datafield tag="655" ind1=" " ind2="7">
+      <subfield code="0">(DE-588)4048476-2</subfield>
+      <subfield code="0">https://d-nb.info/gnd/4048476-2</subfield>
+      <subfield code="0">(DE-101)040484769</subfield>
+      <subfield code="a">Ratgeber</subfield>
+      <subfield code="2">gnd-content</subfield>
+    </datafield>
+    <datafield tag="655" ind1=" " ind2="7">
+      <subfield code="a">Ratgeber</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="655" ind1=" " ind2="7">
+      <subfield code="a">Ratgeber</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="689" ind1="0" ind2="0">
+      <subfield code="0">(DE-588)4034792-8</subfield>
+      <subfield code="0">https://d-nb.info/gnd/4034792-8</subfield>
+      <subfield code="0">(DE-101)040347923</subfield>
+      <subfield code="D">s</subfield>
+      <subfield code="a">Lawine</subfield>
+    </datafield>
+    <datafield tag="689" ind1="0" ind2="1">
+      <subfield code="A">f</subfield>
+      <subfield code="a">Ratgeber</subfield>
+    </datafield>
+    <datafield tag="689" ind1="0" ind2=" ">
+      <subfield code="5">DE-101</subfield>
+      <subfield code="5">DE-101</subfield>
+    </datafield>
+    <datafield tag="689" ind1="1" ind2="0">
+      <subfield code="0">(DE-588)4166970-8</subfield>
+      <subfield code="0">https://d-nb.info/gnd/4166970-8</subfield>
+      <subfield code="0">(DE-101)041669703</subfield>
+      <subfield code="D">s</subfield>
+      <subfield code="a">Lawinenunfall</subfield>
+    </datafield>
+    <datafield tag="689" ind1="1" ind2="1">
+      <subfield code="A">f</subfield>
+      <subfield code="a">Ratgeber</subfield>
+    </datafield>
+    <datafield tag="689" ind1="1" ind2=" ">
+      <subfield code="5">DE-101</subfield>
+      <subfield code="5">DE-101</subfield>
+    </datafield>
+    <datafield tag="850" ind1=" " ind2=" ">
+      <subfield code="a">DE-101a</subfield>
+      <subfield code="a">DE-101b</subfield>
+    </datafield>
+    <datafield tag="856" ind1="4" ind2="2">
+      <subfield code="m">B:DE-101</subfield>
+      <subfield code="q">application/pdf</subfield>
+      <subfield code="u">https://d-nb.info/1000001539/04</subfield>
+      <subfield code="3">Inhaltsverzeichnis</subfield>
+    </datafield>
+    <datafield tag="925" ind1="r" ind2=" ">
+      <subfield code="a">ra</subfield>
+    </datafield>
+  </record>
+  <record xmlns="http://www.loc.gov/MARC21/slim" type="Bibliographic">
+    <leader>00000nam a2200000uc 4500</leader>
+    <controlfield tag="001">1215111738</controlfield>
+    <controlfield tag="003">DE-101</controlfield>
+    <controlfield tag="005">20200805042816.0</controlfield>
+    <controlfield tag="007">cr||||||||||||</controlfield>
+    <controlfield tag="008">200804s2018    gw |||||o|||| 00||||ger  </controlfield>
+    <datafield tag="015" ind1=" " ind2=" ">
+      <subfield code="a">20,O09</subfield>
+      <subfield code="2">dnb</subfield>
+    </datafield>
+    <datafield tag="016" ind1="7" ind2=" ">
+      <subfield code="2">DE-101</subfield>
+      <subfield code="a">1215111738</subfield>
+    </datafield>
+    <datafield tag="020" ind1=" " ind2=" ">
+      <subfield code="a">9783406734960</subfield>
+      <subfield code="9">978-3-406-73496-0</subfield>
+    </datafield>
+    <datafield tag="024" ind1="3" ind2=" ">
+      <subfield code="a">9783406734960</subfield>
+    </datafield>
+    <datafield tag="024" ind1="7" ind2=" ">
+      <subfield code="2">urn</subfield>
+      <subfield code="a">urn:nbn:de:101:1-2020080409340317691383</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(DE-599)DNB1215111738</subfield>
+    </datafield>
+    <datafield tag="040" ind1=" " ind2=" ">
+      <subfield code="a">1240</subfield>
+      <subfield code="b">ger</subfield>
+      <subfield code="c">DE-101</subfield>
+      <subfield code="d">0292</subfield>
+    </datafield>
+    <datafield tag="041" ind1=" " ind2=" ">
+      <subfield code="a">ger</subfield>
+    </datafield>
+    <datafield tag="044" ind1=" " ind2=" ">
+      <subfield code="c">XA-DE-BY</subfield>
+    </datafield>
+    <datafield tag="082" ind1="0" ind2="4">
+      <subfield code="8">1\u</subfield>
+      <subfield code="a">937.06</subfield>
+      <subfield code="q">DE-101</subfield>
+      <subfield code="2">23/ger</subfield>
+    </datafield>
+    <datafield tag="083" ind1="7" ind2=" ">
+      <subfield code="8">2\p</subfield>
+      <subfield code="a">930</subfield>
+      <subfield code="q">DE-101</subfield>
+      <subfield code="2">23sdnb</subfield>
+    </datafield>
+    <datafield tag="085" ind1=" " ind2=" ">
+      <subfield code="8">1\u</subfield>
+      <subfield code="b">937.06</subfield>
+    </datafield>
+    <datafield tag="100" ind1="1" ind2=" ">
+      <subfield code="0">(DE-588)118833154</subfield>
+      <subfield code="0">https://d-nb.info/gnd/118833154</subfield>
+      <subfield code="0">(DE-101)118833154</subfield>
+      <subfield code="a">Christ, Karl</subfield>
+      <subfield code="d">1923-2008</subfield>
+      <subfield code="e">Verfasser</subfield>
+      <subfield code="4">aut</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="245" ind1="1" ind2="0">
+      <subfield code="a">Die Römische Kaiserzeit</subfield>
+      <subfield code="b">Von Augustus bis Diokletian</subfield>
+      <subfield code="c">Karl Christ</subfield>
+    </datafield>
+    <datafield tag="250" ind1=" " ind2=" ">
+      <subfield code="a">5. Auflage</subfield>
+    </datafield>
+    <datafield tag="259" ind1=" " ind2=" ">
+      <subfield code="a">15</subfield>
+    </datafield>
+    <datafield tag="264" ind1=" " ind2="1">
+      <subfield code="a">München</subfield>
+      <subfield code="b">C.H.Beck</subfield>
+      <subfield code="c">2018</subfield>
+    </datafield>
+    <datafield tag="300" ind1=" " ind2=" ">
+      <subfield code="a">Online-Ressource, 128 Seiten</subfield>
+      <subfield code="b">mit 7 Abbildungen und 3 Karten</subfield>
+    </datafield>
+    <datafield tag="336" ind1=" " ind2=" ">
+      <subfield code="a">Text</subfield>
+      <subfield code="b">txt</subfield>
+      <subfield code="2">rdacontent</subfield>
+    </datafield>
+    <datafield tag="337" ind1=" " ind2=" ">
+      <subfield code="a">Computermedien</subfield>
+      <subfield code="b">c</subfield>
+      <subfield code="2">rdamedia</subfield>
+    </datafield>
+    <datafield tag="338" ind1=" " ind2=" ">
+      <subfield code="a">Online-Ressource</subfield>
+      <subfield code="b">cr</subfield>
+      <subfield code="2">rdacarrier</subfield>
+    </datafield>
+    <datafield tag="490" ind1="1" ind2=" ">
+      <subfield code="a">Beck'sche Reihe</subfield>
+      <subfield code="v">2155</subfield>
+    </datafield>
+    <datafield tag="583" ind1="1" ind2=" ">
+      <subfield code="a">Archivierung/Langzeitarchivierung gewährleistet</subfield>
+      <subfield code="5">DE-101</subfield>
+      <subfield code="2">pdager</subfield>
+    </datafield>
+    <datafield tag="648" ind1=" " ind2="7">
+      <subfield code="a">Geschichte 27 v. Chr.-284</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="651" ind1=" " ind2="7">
+      <subfield code="0">(DE-588)4076778-4</subfield>
+      <subfield code="0">https://d-nb.info/gnd/4076778-4</subfield>
+      <subfield code="0">(DE-101)040767787</subfield>
+      <subfield code="a">Römisches Reich</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">(Produktform)Electronic book text</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">Militär</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">Diokletian</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">Kaiserzeit</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">römische Kaiserzeit</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">(cdng:division)DF13: Monographie</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">Politik</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">Staat</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">BeckLSW</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">Kaiser</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">Augustus</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">Römisches Reich</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">Senat</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">Kaiserreich</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">Antike</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">(VLB-WN)9944: Vor- und Frühgeschichte, Antike</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">(Produktrabattgruppe)07: BSR-Rabatt</subfield>
+    </datafield>
+    <datafield tag="689" ind1="0" ind2="0">
+      <subfield code="0">(DE-588)4076778-4</subfield>
+      <subfield code="0">https://d-nb.info/gnd/4076778-4</subfield>
+      <subfield code="0">(DE-101)040767787</subfield>
+      <subfield code="D">g</subfield>
+      <subfield code="a">Römisches Reich</subfield>
+    </datafield>
+    <datafield tag="689" ind1="0" ind2="1">
+      <subfield code="A">z</subfield>
+      <subfield code="a">Geschichte 27 v. Chr.-284</subfield>
+    </datafield>
+    <datafield tag="689" ind1="0" ind2=" ">
+      <subfield code="5">DE-101</subfield>
+      <subfield code="5">DE-101</subfield>
+    </datafield>
+    <datafield tag="710" ind1="2" ind2=" ">
+      <subfield code="0">(DE-588)1023902869</subfield>
+      <subfield code="0">https://d-nb.info/gnd/1023902869</subfield>
+      <subfield code="0">(DE-101)1023902869</subfield>
+      <subfield code="a">Verlag C.H. Beck</subfield>
+      <subfield code="e">Verlag</subfield>
+      <subfield code="4">pbl</subfield>
+    </datafield>
+    <datafield tag="776" ind1="0" ind2="8">
+      <subfield code="i">Erscheint auch als</subfield>
+      <subfield code="n">Online-Ausgabe</subfield>
+      <subfield code="z">9783406734960</subfield>
+    </datafield>
+    <datafield tag="776" ind1="0" ind2="8">
+      <subfield code="i">Erscheint auch als</subfield>
+      <subfield code="n">Druck-Ausgabe</subfield>
+      <subfield code="a">Christ, Karl, 1923-2008</subfield>
+      <subfield code="t">Die römische Kaiserzeit</subfield>
+      <subfield code="d">München : Verlag C.H. Beck, 2018</subfield>
+      <subfield code="h">127 Seiten, Illustrationen</subfield>
+      <subfield code="w">(DE-101)1169996531</subfield>
+      <subfield code="b">5., aktualisierte Auflage, Originalausgabe</subfield>
+    </datafield>
+    <datafield tag="830" ind1=" " ind2="0">
+      <subfield code="a">Beck'sche Reihe</subfield>
+      <subfield code="v">2155</subfield>
+    </datafield>
+    <datafield tag="850" ind1=" " ind2=" ">
+      <subfield code="a">DE-101a</subfield>
+      <subfield code="a">DE-101b</subfield>
+    </datafield>
+    <datafield tag="856" ind1="4" ind2="0">
+      <subfield code="u">https://nbn-resolving.org/urn:nbn:de:101:1-2020080409340317691383</subfield>
+      <subfield code="x">Resolving-System</subfield>
+    </datafield>
+    <datafield tag="856" ind1=" " ind2="0">
+      <subfield code="u">https://d-nb.info/1215111738/34</subfield>
+      <subfield code="x">Langzeitarchivierung Nationalbibliothek</subfield>
+    </datafield>
+    <datafield tag="856" ind1="4" ind2=" ">
+      <subfield code="q">application/pdf</subfield>
+      <subfield code="u">http://www.chbeck.de/</subfield>
+      <subfield code="x">Verlag</subfield>
+    </datafield>
+    <datafield tag="883" ind1="1" ind2=" ">
+      <subfield code="8">2\p</subfield>
+      <subfield code="a">Übernahme aus paralleler Ausgabe</subfield>
+      <subfield code="d">20200805</subfield>
+      <subfield code="q">DE-101</subfield>
+    </datafield>
+    <datafield tag="925" ind1="r" ind2=" ">
+      <subfield code="a">ro</subfield>
+      <subfield code="a">ra</subfield>
+    </datafield>
+    <datafield tag="926" ind1="1" ind2=" ">
+      <subfield code="a">NHDA</subfield>
+      <subfield code="o">93</subfield>
+      <subfield code="v">1.3</subfield>
+      <subfield code="x">Europäische Geschichte: Römer</subfield>
+    </datafield>
+    <datafield tag="926" ind1="2" ind2=" ">
+      <subfield code="a">NHC</subfield>
+      <subfield code="o">93</subfield>
+      <subfield code="v">1.3</subfield>
+      <subfield code="x">Antike</subfield>
+    </datafield>
+  </record>
+  <record xmlns="http://www.loc.gov/MARC21/slim" type="Bibliographic">
+    <leader>00000pam a2200000 c 4500</leader>
+    <controlfield tag="001">996663061</controlfield>
+    <controlfield tag="003">DE-101</controlfield>
+    <controlfield tag="005">20200702144131.0</controlfield>
+    <controlfield tag="007">tu</controlfield>
+    <controlfield tag="008">090909s2009    gw ||||| |||| 00||||ger  </controlfield>
+    <datafield tag="015" ind1=" " ind2=" ">
+      <subfield code="a">09,A41,0754</subfield>
+      <subfield code="z">09,N39,0428</subfield>
+      <subfield code="2">dnb</subfield>
+    </datafield>
+    <datafield tag="016" ind1="7" ind2=" ">
+      <subfield code="2">DE-101</subfield>
+      <subfield code="a">996663061</subfield>
+    </datafield>
+    <datafield tag="020" ind1=" " ind2=" ">
+      <subfield code="a">9783060204410</subfield>
+      <subfield code="c">kart. : EUR 11.95, sfr 22.10 (freier Pr.)</subfield>
+      <subfield code="9">978-3-06-020441-0</subfield>
+    </datafield>
+    <datafield tag="024" ind1="3" ind2=" ">
+      <subfield code="a">9783060204410</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(DE-599)DNB996663061</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(OCoLC)444903681</subfield>
+    </datafield>
+    <datafield tag="040" ind1=" " ind2=" ">
+      <subfield code="a">1145</subfield>
+      <subfield code="b">ger</subfield>
+      <subfield code="c">DE-101</subfield>
+      <subfield code="d">1140</subfield>
+    </datafield>
+    <datafield tag="041" ind1=" " ind2=" ">
+      <subfield code="a">ger</subfield>
+    </datafield>
+    <datafield tag="044" ind1=" " ind2=" ">
+      <subfield code="c">XA-DE-BE</subfield>
+    </datafield>
+    <datafield tag="082" ind1="0" ind2="4">
+      <subfield code="8">1\u</subfield>
+      <subfield code="a">438.249435</subfield>
+      <subfield code="q">DE-101</subfield>
+      <subfield code="2">22/ger</subfield>
+    </datafield>
+    <datafield tag="083" ind1="7" ind2=" ">
+      <subfield code="a">430</subfield>
+      <subfield code="q">DE-101</subfield>
+      <subfield code="2">22sdnb</subfield>
+    </datafield>
+    <datafield tag="085" ind1=" " ind2=" ">
+      <subfield code="8">1\u</subfield>
+      <subfield code="b">438</subfield>
+    </datafield>
+    <datafield tag="085" ind1=" " ind2=" ">
+      <subfield code="8">1\u</subfield>
+      <subfield code="z">4</subfield>
+      <subfield code="s">824</subfield>
+    </datafield>
+    <datafield tag="085" ind1=" " ind2=" ">
+      <subfield code="8">1\u</subfield>
+      <subfield code="z">6</subfield>
+      <subfield code="s">9435</subfield>
+    </datafield>
+    <datafield tag="090" ind1=" " ind2=" ">
+      <subfield code="a">b</subfield>
+    </datafield>
+    <datafield tag="245" ind1="0" ind2="0">
+      <subfield code="a">Deutsch für Zuwanderer</subfield>
+      <subfield code="b">Rahmencurriculum für Integrationskurse ; Deutsch als Zweitsprache</subfield>
+      <subfield code="c">Goethe-Institut ... Von Rosemarie Buhlmann ... [Projektleitung: Karin Ende]</subfield>
+    </datafield>
+    <datafield tag="250" ind1=" " ind2=" ">
+      <subfield code="a">1. Aufl.</subfield>
+    </datafield>
+    <datafield tag="259" ind1=" " ind2=" ">
+      <subfield code="a">11</subfield>
+    </datafield>
+    <datafield tag="264" ind1=" " ind2="1">
+      <subfield code="a">Berlin</subfield>
+      <subfield code="b">Cornelsen</subfield>
+      <subfield code="c">2009</subfield>
+    </datafield>
+    <datafield tag="300" ind1=" " ind2=" ">
+      <subfield code="a">138 S.</subfield>
+      <subfield code="b">graph. Darst.</subfield>
+      <subfield code="c">30 cm</subfield>
+    </datafield>
+    <datafield tag="336" ind1=" " ind2=" ">
+      <subfield code="a">Text</subfield>
+      <subfield code="b">txt</subfield>
+      <subfield code="2">rdacontent</subfield>
+    </datafield>
+    <datafield tag="337" ind1=" " ind2=" ">
+      <subfield code="a">ohne Hilfsmittel zu benutzen</subfield>
+      <subfield code="b">n</subfield>
+      <subfield code="2">rdamedia</subfield>
+    </datafield>
+    <datafield tag="338" ind1=" " ind2=" ">
+      <subfield code="a">Band</subfield>
+      <subfield code="b">nc</subfield>
+      <subfield code="2">rdacarrier</subfield>
+    </datafield>
+    <datafield tag="500" ind1=" " ind2=" ">
+      <subfield code="a">Literaturverz. S. 130 - 136</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="7">
+      <subfield code="0">(DE-588)4113292-0</subfield>
+      <subfield code="0">https://d-nb.info/gnd/4113292-0</subfield>
+      <subfield code="0">(DE-101)041132920</subfield>
+      <subfield code="a">Deutsch</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="7">
+      <subfield code="0">(DE-588)4018424-9</subfield>
+      <subfield code="0">https://d-nb.info/gnd/4018424-9</subfield>
+      <subfield code="0">(DE-101)040184242</subfield>
+      <subfield code="a">Fremdsprache</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="7">
+      <subfield code="0">(DE-588)4061165-6</subfield>
+      <subfield code="0">https://d-nb.info/gnd/4061165-6</subfield>
+      <subfield code="0">(DE-101)040611655</subfield>
+      <subfield code="a">Türken</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">(VLB-FS)VLB-Schulbuch (Deutschland)</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">(VLB-PF)BC: Paperback</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">(VLB-WN)1870: Hardcover, Softcover / Schule, Lernen/Deutsch als Zweitsprache, Fremdsprache</subfield>
+    </datafield>
+    <datafield tag="655" ind1=" " ind2="7">
+      <subfield code="0">(DE-588)4151278-9</subfield>
+      <subfield code="0">https://d-nb.info/gnd/4151278-9</subfield>
+      <subfield code="0">(DE-101)041512782</subfield>
+      <subfield code="a">Einführung</subfield>
+      <subfield code="2">gnd-content</subfield>
+    </datafield>
+    <datafield tag="655" ind1=" " ind2="7">
+      <subfield code="a">Einführung</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="689" ind1="0" ind2="0">
+      <subfield code="0">(DE-588)4113292-0</subfield>
+      <subfield code="0">https://d-nb.info/gnd/4113292-0</subfield>
+      <subfield code="0">(DE-101)041132920</subfield>
+      <subfield code="D">s</subfield>
+      <subfield code="a">Deutsch</subfield>
+    </datafield>
+    <datafield tag="689" ind1="0" ind2="1">
+      <subfield code="0">(DE-588)4018424-9</subfield>
+      <subfield code="0">https://d-nb.info/gnd/4018424-9</subfield>
+      <subfield code="0">(DE-101)040184242</subfield>
+      <subfield code="D">s</subfield>
+      <subfield code="a">Fremdsprache</subfield>
+    </datafield>
+    <datafield tag="689" ind1="0" ind2="2">
+      <subfield code="0">(DE-588)4061165-6</subfield>
+      <subfield code="0">https://d-nb.info/gnd/4061165-6</subfield>
+      <subfield code="0">(DE-101)040611655</subfield>
+      <subfield code="D">s</subfield>
+      <subfield code="a">Türken</subfield>
+    </datafield>
+    <datafield tag="689" ind1="0" ind2="3">
+      <subfield code="A">f</subfield>
+      <subfield code="a">Einführung</subfield>
+    </datafield>
+    <datafield tag="689" ind1="0" ind2=" ">
+      <subfield code="5">DE-101</subfield>
+      <subfield code="5">DE-101</subfield>
+    </datafield>
+    <datafield tag="700" ind1="1" ind2=" ">
+      <subfield code="0">(DE-588)1145078184</subfield>
+      <subfield code="0">https://d-nb.info/gnd/1145078184</subfield>
+      <subfield code="0">(DE-101)1145078184</subfield>
+      <subfield code="a">Buhlmann, Rosemarie</subfield>
+      <subfield code="e">Mitwirkender</subfield>
+      <subfield code="4">ctb</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="700" ind1="1" ind2=" ">
+      <subfield code="0">(DE-588)1041637152</subfield>
+      <subfield code="0">https://d-nb.info/gnd/1041637152</subfield>
+      <subfield code="0">(DE-101)1041637152</subfield>
+      <subfield code="a">Ende, Karin</subfield>
+      <subfield code="e">Herausgeber</subfield>
+      <subfield code="4">edt</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="710" ind1="2" ind2=" ">
+      <subfield code="0">(DE-588)10068828-7</subfield>
+      <subfield code="0">https://d-nb.info/gnd/10068828-7</subfield>
+      <subfield code="0">(DE-101)96962073X</subfield>
+      <subfield code="a">Goethe-Institut</subfield>
+      <subfield code="e">Herausgebendes Organ</subfield>
+      <subfield code="4">isb</subfield>
+    </datafield>
+    <datafield tag="850" ind1=" " ind2=" ">
+      <subfield code="a">DE-101a</subfield>
+      <subfield code="a">DE-101b</subfield>
+    </datafield>
+    <datafield tag="856" ind1="4" ind2="2">
+      <subfield code="m">B:DE-101</subfield>
+      <subfield code="q">application/pdf</subfield>
+      <subfield code="u">https://d-nb.info/996663061/04</subfield>
+      <subfield code="3">Inhaltsverzeichnis</subfield>
+    </datafield>
+    <datafield tag="925" ind1="r" ind2=" ">
+      <subfield code="a">ra</subfield>
+    </datafield>
+  </record>
+<record xmlns="http://www.loc.gov/MARC21/slim" type="Bibliographic">
+	    <leader>00000nas a2200000 c 4500</leader>
+	    <controlfield tag="001">1204595895</controlfield>
+	    <controlfield tag="003">DE-101</controlfield>
+	    <controlfield tag="005">20200213141551.0</controlfield>
+	    <controlfield tag="007">tu</controlfield>
+	    <controlfield tag="008">200213c20189999gw z||m|  ||| 0||||1ger c</controlfield>
+	    <datafield tag="016" ind1="7" ind2=" ">
+	      <subfield code="2">DE-101</subfield>
+	      <subfield code="a">1204595895</subfield>
+	    </datafield>
+	    <datafield tag="016" ind1="7" ind2=" ">
+	      <subfield code="2">DE-600</subfield>
+	      <subfield code="a">3008380-1</subfield>
+	    </datafield>
+	    <datafield tag="022" ind1=" " ind2=" ">
+	      <subfield code="a">2699-7665</subfield>
+	      <subfield code="2">6</subfield>
+	    </datafield>
+	    <datafield tag="035" ind1=" " ind2=" ">
+	      <subfield code="a">(DE-599)ZDB3008380-1</subfield>
+	    </datafield>
+	    <datafield tag="040" ind1=" " ind2=" ">
+	      <subfield code="a">1240</subfield>
+	      <subfield code="b">ger</subfield>
+	      <subfield code="c">DE-101</subfield>
+	      <subfield code="d">1240</subfield>
+	      <subfield code="e">rda</subfield>
+	    </datafield>
+	    <datafield tag="041" ind1=" " ind2=" ">
+	      <subfield code="a">ger</subfield>
+	    </datafield>
+	    <datafield tag="044" ind1=" " ind2=" ">
+	      <subfield code="c">XA-DE</subfield>
+	    </datafield>
+	    <datafield tag="082" ind1="7" ind2="4">
+	      <subfield code="a">770</subfield>
+	      <subfield code="q">DE-101</subfield>
+	      <subfield code="2">23sdnb</subfield>
+	    </datafield>
+	    <datafield tag="083" ind1="7" ind2=" ">
+	      <subfield code="a">770</subfield>
+	      <subfield code="q">DE-600</subfield>
+	      <subfield code="2">23sdnb</subfield>
+	    </datafield>
+	    <datafield tag="222" ind1=" " ind2="0">
+	      <subfield code="a">Regensburger Stadtfotografen</subfield>
+	    </datafield>
+	    <datafield tag="245" ind1="0" ind2="0">
+	      <subfield code="a">Regensburger Stadtfotografen</subfield>
+	    </datafield>
+	    <datafield tag="264" ind1="3" ind2="1">
+	      <subfield code="a">Regensburg</subfield>
+	      <subfield code="b">Morsbach Verlag</subfield>
+	      <subfield code="c">[2018]-</subfield>
+	    </datafield>
+	    <datafield tag="300" ind1=" " ind2=" ">
+	      <subfield code="a">Bände</subfield>
+	      <subfield code="c">19 x 28 cm</subfield>
+	    </datafield>
+	    <datafield tag="336" ind1=" " ind2=" ">
+	      <subfield code="a">Text</subfield>
+	      <subfield code="b">txt</subfield>
+	      <subfield code="2">rdacontent</subfield>
+	    </datafield>
+	    <datafield tag="337" ind1=" " ind2=" ">
+	      <subfield code="a">ohne Hilfsmittel zu benutzen</subfield>
+	      <subfield code="b">n</subfield>
+	      <subfield code="2">rdamedia</subfield>
+	    </datafield>
+	    <datafield tag="338" ind1=" " ind2=" ">
+	      <subfield code="a">Band</subfield>
+	      <subfield code="b">nc</subfield>
+	      <subfield code="2">rdacarrier</subfield>
+	    </datafield>
+	    <datafield tag="362" ind1="0" ind2=" ">
+	      <subfield code="a">1-</subfield>
+	    </datafield>
+	    <datafield tag="363" ind1="0" ind2="1">
+	      <subfield code="8">1.1\x</subfield>
+	      <subfield code="a">1</subfield>
+	      <subfield code="i">2018</subfield>
+	    </datafield>
+	    <datafield tag="655" ind1=" " ind2="7">
+	      <subfield code="0">(DE-588)4179998-7</subfield>
+	      <subfield code="0">https://d-nb.info/gnd/4179998-7</subfield>
+	      <subfield code="0">(DE-101)041799984</subfield>
+	      <subfield code="a">Monografische Reihe</subfield>
+	      <subfield code="2">gnd-content</subfield>
+	    </datafield>
+	    <datafield tag="850" ind1=" " ind2=" ">
+	      <subfield code="a">DE-101b</subfield>
+	    </datafield>
+	    <datafield tag="925" ind1="r" ind2=" ">
+	      <subfield code="a">ra</subfield>
+	    </datafield>
+	    <datafield tag="925" ind1="w" ind2=" ">
+	      <subfield code="a">b</subfield>
+	    </datafield>
+	</record>
+
+  <record xmlns="http://www.loc.gov/MARC21/slim" type="Bibliographic">
+	    <leader>00000naa a2200000uc 4500</leader>
+	    <controlfield tag="001">1124821007</controlfield>
+	    <controlfield tag="003">DE-101</controlfield>
+	    <controlfield tag="005">20180817131749.0</controlfield>
+	    <controlfield tag="007">cr||||||||||||</controlfield>
+	    <controlfield tag="008">170206s2017    gw |||||o|||| 00||||eng  </controlfield>
+	    <datafield tag="016" ind1="7" ind2=" ">
+	      <subfield code="2">DE-101</subfield>
+	      <subfield code="a">1124821007</subfield>
+	    </datafield>
+	    <datafield tag="022" ind1=" " ind2=" ">
+	      <subfield code="a">1432-198X</subfield>
+	    </datafield>
+	    <datafield tag="024" ind1="7" ind2=" ">
+	      <subfield code="a">10.1007/s00467-016-3559-2</subfield>
+	      <subfield code="2">doi</subfield>
+	    </datafield>
+	    <datafield tag="024" ind1="7" ind2=" ">
+	      <subfield code="2">urn</subfield>
+	      <subfield code="a">urn:nbn:de:1111-201702064880</subfield>
+	    </datafield>
+	    <datafield tag="035" ind1=" " ind2=" ">
+	      <subfield code="a">(DE-599)DNB1124821007</subfield>
+	    </datafield>
+	    <datafield tag="040" ind1=" " ind2=" ">
+	      <subfield code="a">1140</subfield>
+	      <subfield code="b">ger</subfield>
+	      <subfield code="c">DE-101</subfield>
+	      <subfield code="d">0292</subfield>
+	    </datafield>
+	    <datafield tag="041" ind1=" " ind2=" ">
+	      <subfield code="a">eng</subfield>
+	    </datafield>
+	    <datafield tag="044" ind1=" " ind2=" ">
+	      <subfield code="c">XA-DE</subfield>
+	    </datafield>
+	    <datafield tag="082" ind1="7" ind2="4">
+	      <subfield code="a">616.6</subfield>
+	      <subfield code="q">DE-101</subfield>
+	      <subfield code="2">23kdnb</subfield>
+	    </datafield>
+	    <datafield tag="083" ind1="7" ind2=" ">
+	      <subfield code="8">4\p</subfield>
+	      <subfield code="a">610</subfield>
+	      <subfield code="q">DE-101</subfield>
+	      <subfield code="2">23sdnb</subfield>
+	    </datafield>
+	    <datafield tag="100" ind1="1" ind2=" ">
+	      <subfield code="0">(DE-588)1111292574</subfield>
+	      <subfield code="0">https://d-nb.info/gnd/1111292574</subfield>
+	      <subfield code="0">(DE-101)1111292574</subfield>
+	      <subfield code="a">Plumb, Lucy A.</subfield>
+	      <subfield code="e">Verfasser</subfield>
+	      <subfield code="4">aut</subfield>
+	      <subfield code="2">gnd</subfield>
+	    </datafield>
+	    <datafield tag="245" ind1="1" ind2="0">
+	      <subfield code="a">Paediatric anti-neutrophil cytoplasmic antibody (ANCA)-associated vasculitis: an update on renal management</subfield>
+	      <subfield code="c">by Lucy A Plumb, Louise Oni, Stephen D Marks, Kjell Tullus</subfield>
+	    </datafield>
+	    <datafield tag="300" ind1=" " ind2=" ">
+	      <subfield code="a">Online-Ressource</subfield>
+	      <subfield code="b">online resource.</subfield>
+	    </datafield>
+	    <datafield tag="336" ind1=" " ind2=" ">
+	      <subfield code="a">Text</subfield>
+	      <subfield code="b">txt</subfield>
+	      <subfield code="2">rdacontent</subfield>
+	    </datafield>
+	    <datafield tag="337" ind1=" " ind2=" ">
+	      <subfield code="a">Computermedien</subfield>
+	      <subfield code="b">c</subfield>
+	      <subfield code="2">rdamedia</subfield>
+	    </datafield>
+	    <datafield tag="338" ind1=" " ind2=" ">
+	      <subfield code="a">Online-Ressource</subfield>
+	      <subfield code="b">cr</subfield>
+	      <subfield code="2">rdacarrier</subfield>
+	    </datafield>
+	    <datafield tag="583" ind1="1" ind2=" ">
+	      <subfield code="a">Archivierung/Langzeitarchivierung gewährleistet</subfield>
+	      <subfield code="5">DE-101</subfield>
+	      <subfield code="2">pdager</subfield>
+	    </datafield>
+	    <datafield tag="650" ind1=" " ind2="7">
+	      <subfield code="8">1\p</subfield>
+	      <subfield code="0">(DE-588)4062158-3</subfield>
+	      <subfield code="0">https://d-nb.info/gnd/4062158-3</subfield>
+	      <subfield code="0">(DE-101)040621588</subfield>
+	      <subfield code="a">Urologie</subfield>
+	      <subfield code="2">gnd</subfield>
+	    </datafield>
+	    <datafield tag="650" ind1=" " ind2="7">
+	      <subfield code="8">2\p</subfield>
+	      <subfield code="0">(DE-588)4132473-0</subfield>
+	      <subfield code="0">https://d-nb.info/gnd/4132473-0</subfield>
+	      <subfield code="0">(DE-101)041324730</subfield>
+	      <subfield code="a">Urogenitalkrankheit</subfield>
+	      <subfield code="2">gnd</subfield>
+	    </datafield>
+	    <datafield tag="650" ind1=" " ind2="7">
+	      <subfield code="8">3\p</subfield>
+	      <subfield code="0">(DE-588)4135486-2</subfield>
+	      <subfield code="0">https://d-nb.info/gnd/4135486-2</subfield>
+	      <subfield code="0">(DE-101)041354869</subfield>
+	      <subfield code="a">Harnwegskrankheit</subfield>
+	      <subfield code="2">gnd</subfield>
+	    </datafield>
+	    <datafield tag="653" ind1=" " ind2=" ">
+	      <subfield code="a">(lcsh)Medicine.</subfield>
+	    </datafield>
+	    <datafield tag="653" ind1=" " ind2=" ">
+	      <subfield code="a">(lcsh)Nephrology.</subfield>
+	    </datafield>
+	    <datafield tag="653" ind1=" " ind2=" ">
+	      <subfield code="a">(lcsh)Pediatrics.</subfield>
+	    </datafield>
+	    <datafield tag="653" ind1=" " ind2=" ">
+	      <subfield code="a">(lcsh)Urology.</subfield>
+	    </datafield>
+	    <datafield tag="653" ind1=" " ind2=" ">
+	      <subfield code="a">Medicine &amp; Public Health.</subfield>
+	    </datafield>
+	    <datafield tag="653" ind1=" " ind2=" ">
+	      <subfield code="a">Pediatrics.</subfield>
+	    </datafield>
+	    <datafield tag="653" ind1=" " ind2=" ">
+	      <subfield code="a">Nephrology.</subfield>
+	    </datafield>
+	    <datafield tag="653" ind1=" " ind2=" ">
+	      <subfield code="a">Urology.</subfield>
+	    </datafield>
+	    <datafield tag="700" ind1="1" ind2=" ">
+	      <subfield code="0">(DE-588)1091055890</subfield>
+	      <subfield code="0">https://d-nb.info/gnd/1091055890</subfield>
+	      <subfield code="0">(DE-101)1091055890</subfield>
+	      <subfield code="a">Oni, Louise</subfield>
+	      <subfield code="e">Sonstige</subfield>
+	      <subfield code="4">oth</subfield>
+	      <subfield code="2">gnd</subfield>
+	    </datafield>
+	    <datafield tag="700" ind1="1" ind2=" ">
+	      <subfield code="0">(DE-588)1084191628</subfield>
+	      <subfield code="0">https://d-nb.info/gnd/1084191628</subfield>
+	      <subfield code="0">(DE-101)1084191628</subfield>
+	      <subfield code="a">Marks, Stephen D.</subfield>
+	      <subfield code="e">Sonstige</subfield>
+	      <subfield code="4">oth</subfield>
+	      <subfield code="2">gnd</subfield>
+	    </datafield>
+	    <datafield tag="700" ind1="1" ind2=" ">
+	      <subfield code="0">(DE-588)15147611X</subfield>
+	      <subfield code="0">https://d-nb.info/gnd/15147611X</subfield>
+	      <subfield code="0">(DE-101)15147611X</subfield>
+	      <subfield code="a">Tullus, Kjell</subfield>
+	      <subfield code="e">Sonstige</subfield>
+	      <subfield code="4">oth</subfield>
+	      <subfield code="2">gnd</subfield>
+	    </datafield>
+	    <datafield tag="710" ind1="2" ind2=" ">
+	      <subfield code="a">SpringerLink (Online service)</subfield>
+	      <subfield code="e">Sonstige</subfield>
+	      <subfield code="4">oth</subfield>
+	    </datafield>
+	    <datafield tag="773" ind1="0" ind2="8">
+	      <subfield code="7">|||s</subfield>
+	      <subfield code="g">day:6</subfield>
+	      <subfield code="g">month:1</subfield>
+	      <subfield code="g">year:2017</subfield>
+	      <subfield code="g">pages:1-15</subfield>
+	    </datafield>
+	    <datafield tag="773" ind1="0" ind2="8">
+	      <subfield code="i">In:</subfield>
+	      <subfield code="t">Pediatric nephrology</subfield>
+	      <subfield code="d">Berlin ; Heidelberg : Springer, 1987-</subfield>
+	      <subfield code="h">Online-Ressource</subfield>
+	      <subfield code="x">1432-198X</subfield>
+	      <subfield code="w">(DE-600)1463004-7</subfield>
+	      <subfield code="w">(DE-101)01956323X</subfield>
+	    </datafield>
+	    <datafield tag="850" ind1=" " ind2=" ">
+	      <subfield code="a">DE-101a</subfield>
+	      <subfield code="a">DE-101b</subfield>
+	    </datafield>
+	    <datafield tag="856" ind1="4" ind2="0">
+	      <subfield code="u">https://doi.org/10.1007/s00467-016-3559-2</subfield>
+	      <subfield code="x">Resolving-System</subfield>
+	    </datafield>
+	    <datafield tag="856" ind1="4" ind2="0">
+	      <subfield code="u">https://nbn-resolving.org/urn:nbn:de:1111-201702064880</subfield>
+	      <subfield code="x">Resolving-System</subfield>
+	    </datafield>
+	    <datafield tag="856" ind1=" " ind2="0">
+	      <subfield code="u">https://d-nb.info/1124821007/34</subfield>
+	      <subfield code="x">Langzeitarchivierung Nationalbibliothek</subfield>
+	    </datafield>
+	    <datafield tag="856" ind1="4" ind2=" ">
+	      <subfield code="u">http://dx.doi.org/10.1007/s00467-016-3559-2</subfield>
+	    </datafield>
+	    <datafield tag="883" ind1="0" ind2=" ">
+	      <subfield code="8">1\p</subfield>
+	      <subfield code="a">maschinell gebildet</subfield>
+	      <subfield code="c">1</subfield>
+	      <subfield code="d">20190525</subfield>
+	      <subfield code="q">DE-101</subfield>
+	    </datafield>
+	    <datafield tag="883" ind1="0" ind2=" ">
+	      <subfield code="8">2\p</subfield>
+	      <subfield code="a">maschinell gebildet</subfield>
+	      <subfield code="c">1</subfield>
+	      <subfield code="d">20190525</subfield>
+	      <subfield code="q">DE-101</subfield>
+	    </datafield>
+	    <datafield tag="883" ind1="0" ind2=" ">
+	      <subfield code="8">3\p</subfield>
+	      <subfield code="a">maschinell gebildet</subfield>
+	      <subfield code="c">1</subfield>
+	      <subfield code="d">20190525</subfield>
+	      <subfield code="q">DE-101</subfield>
+	    </datafield>
+	    <datafield tag="883" ind1="0" ind2=" ">
+	      <subfield code="8">4\p</subfield>
+	      <subfield code="a">maschinell gebildet</subfield>
+	      <subfield code="c">0,999</subfield>
+	      <subfield code="d">20170207</subfield>
+	      <subfield code="q">DE-101</subfield>
+	    </datafield>
+  </record>
+
+  <record xmlns="http://www.loc.gov/MARC21/slim" type="Bibliographic">
+	    <leader>00000nem a2200000 cc4500</leader>
+	    <controlfield tag="001">1204594341</controlfield>
+	    <controlfield tag="003">DE-101</controlfield>
+	    <controlfield tag="005">20200213135753.0</controlfield>
+	    <controlfield tag="007">a|||||||</controlfield>
+	    <controlfield tag="008">200213s1976    gw |||||||z||   ||||ger  </controlfield>
+	    <datafield tag="015" ind1=" " ind2=" ">
+	      <subfield code="a">00,L01</subfield>
+	      <subfield code="2">dnb</subfield>
+	    </datafield>
+	    <datafield tag="016" ind1="7" ind2=" ">
+	      <subfield code="2">DE-101</subfield>
+	      <subfield code="a">1204594341</subfield>
+	    </datafield>
+	    <datafield tag="020" ind1=" " ind2=" ">
+	      <subfield code="c">keine Bindung</subfield>
+	    </datafield>
+	    <datafield tag="034" ind1="0" ind2=" ">
+	      <subfield code="a">a</subfield>
+	      <subfield code="d">W 090 00 00</subfield>
+	      <subfield code="e">E 108 00 00</subfield>
+	      <subfield code="f">N 029 00 00</subfield>
+	      <subfield code="g">N 024 00 00</subfield>
+	      <subfield code="9">A:acx</subfield>
+	    </datafield>
+	    <datafield tag="034" ind1="0" ind2=" ">
+	      <subfield code="a">a</subfield>
+	      <subfield code="d">W090.000000</subfield>
+	      <subfield code="e">E108.000000</subfield>
+	      <subfield code="f">N029.000000</subfield>
+	      <subfield code="g">N024.000000</subfield>
+	      <subfield code="9">A:dcx</subfield>
+	    </datafield>
+	    <datafield tag="035" ind1=" " ind2=" ">
+	      <subfield code="a">(DE-599)DNB1204594341</subfield>
+	    </datafield>
+	    <datafield tag="040" ind1=" " ind2=" ">
+	      <subfield code="a">1165</subfield>
+	      <subfield code="b">ger</subfield>
+	      <subfield code="c">DE-101</subfield>
+	      <subfield code="d">1165</subfield>
+	      <subfield code="e">rda</subfield>
+	    </datafield>
+	    <datafield tag="041" ind1=" " ind2=" ">
+	      <subfield code="a">ger</subfield>
+	    </datafield>
+	    <datafield tag="044" ind1=" " ind2=" ">
+	      <subfield code="c">XA-DE</subfield>
+	    </datafield>
+	    <datafield tag="082" ind1="7" ind2="4">
+	      <subfield code="a">910</subfield>
+	      <subfield code="q">DE-101</subfield>
+	      <subfield code="2">23sdnb</subfield>
+	    </datafield>
+	    <datafield tag="245" ind1="0" ind2="0">
+	      <subfield code="a">Karta mira</subfield>
+	      <subfield code="n">78 A = N G 46-48.</subfield>
+	      <subfield code="p">Kuńmin = Kunming / Head Office of Geodesy and Cartography, People´s Republic of Bulgaria. Sofia 1976 g. = Glavnoe upravlenie geodesii i kartografii, Narodnaja Respublika Bolgarija, Sofia 1976 g.</subfield>
+	    </datafield>
+	    <datafield tag="255" ind1=" " ind2=" ">
+	      <subfield code="a">1:2 500 000</subfield>
+	    </datafield>
+	    <datafield tag="264" ind1="3" ind2="1">
+	      <subfield code="a">[Leipzig]</subfield>
+	      <subfield code="b">[Leipziger Kommissions- und Großbuchhandel]</subfield>
+	      <subfield code="c">1976</subfield>
+	    </datafield>
+	    <datafield tag="300" ind1=" " ind2=" ">
+	      <subfield code="a">1 Karte</subfield>
+	      <subfield code="b">mehrfarbig</subfield>
+	      <subfield code="c">22 x 74 cm, auf Blatt 71 x 100 cm</subfield>
+	    </datafield>
+	    <datafield tag="336" ind1=" " ind2=" ">
+	      <subfield code="a">kartografisches Bild</subfield>
+	      <subfield code="b">cri</subfield>
+	      <subfield code="2">rdacontent</subfield>
+	    </datafield>
+	    <datafield tag="337" ind1=" " ind2=" ">
+	      <subfield code="a">ohne Hilfsmittel zu benutzen</subfield>
+	      <subfield code="b">n</subfield>
+	      <subfield code="2">rdamedia</subfield>
+	    </datafield>
+	    <datafield tag="338" ind1=" " ind2=" ">
+	      <subfield code="a">Blatt</subfield>
+	      <subfield code="b">nb</subfield>
+	      <subfield code="2">rdacarrier</subfield>
+	    </datafield>
+	    <datafield tag="500" ind1=" " ind2=" ">
+	      <subfield code="a">Beschriftung teilweise in kyrillischen Buchstaben. Name von Dukou früher und heute Panzhihua.</subfield>
+	    </datafield>
+	    <datafield tag="650" ind1=" " ind2="7">
+	      <subfield code="0">(DE-588)4174629-6</subfield>
+	      <subfield code="0">https://d-nb.info/gnd/4174629-6</subfield>
+	      <subfield code="0">(DE-101)041746295</subfield>
+	      <subfield code="a">Physische Geografie</subfield>
+	      <subfield code="2">gnd</subfield>
+	    </datafield>
+	    <datafield tag="650" ind1=" " ind2="7">
+	      <subfield code="0">(DE-588)4387561-0</subfield>
+	      <subfield code="0">https://d-nb.info/gnd/4387561-0</subfield>
+	      <subfield code="0">(DE-101)94564583X</subfield>
+	      <subfield code="a">Relief</subfield>
+	      <subfield code="g">Kartografie</subfield>
+	      <subfield code="2">gnd</subfield>
+	    </datafield>
+	    <datafield tag="650" ind1=" " ind2="7">
+	      <subfield code="0">(DE-588)4133697-5</subfield>
+	      <subfield code="0">https://d-nb.info/gnd/4133697-5</subfield>
+	      <subfield code="0">(DE-101)041336976</subfield>
+	      <subfield code="a">Topografie</subfield>
+	      <subfield code="2">gnd</subfield>
+	    </datafield>
+	    <datafield tag="651" ind1=" " ind2="7">
+	      <subfield code="0">(DE-588)4098836-3</subfield>
+	      <subfield code="0">https://d-nb.info/gnd/4098836-3</subfield>
+	      <subfield code="0">(DE-101)040988368</subfield>
+	      <subfield code="a">Kun ming</subfield>
+	      <subfield code="2">gnd</subfield>
+	    </datafield>
+	    <datafield tag="651" ind1=" " ind2="7">
+	      <subfield code="0">(DE-588)4410551-4</subfield>
+	      <subfield code="0">https://d-nb.info/gnd/4410551-4</subfield>
+	      <subfield code="0">(DE-101)947599282</subfield>
+	      <subfield code="a">Imphal</subfield>
+	      <subfield code="2">gnd</subfield>
+	    </datafield>
+	    <datafield tag="651" ind1=" " ind2="7">
+	      <subfield code="0">(DE-588)3045331-8</subfield>
+	      <subfield code="0">https://d-nb.info/gnd/3045331-8</subfield>
+	      <subfield code="0">(DE-101)959518061</subfield>
+	      <subfield code="a">Panzhihua, Sichuan</subfield>
+	      <subfield code="2">gnd</subfield>
+	    </datafield>
+	    <datafield tag="651" ind1=" " ind2="7">
+	      <subfield code="0">(DE-588)6141624-1</subfield>
+	      <subfield code="0">https://d-nb.info/gnd/6141624-1</subfield>
+	      <subfield code="0">(DE-101)1004539940</subfield>
+	      <subfield code="a">Dali</subfield>
+	      <subfield code="g">Yunnan</subfield>
+	      <subfield code="2">gnd</subfield>
+	    </datafield>
+	    <datafield tag="651" ind1=" " ind2="7">
+	      <subfield code="0">(DE-588)4726756-2</subfield>
+	      <subfield code="0">https://d-nb.info/gnd/4726756-2</subfield>
+	      <subfield code="0">(DE-101)967261988</subfield>
+	      <subfield code="a">Guiyang</subfield>
+	      <subfield code="g">Guizhou</subfield>
+	      <subfield code="2">gnd</subfield>
+	    </datafield>
+	    <datafield tag="655" ind1=" " ind2="7">
+	      <subfield code="0">(DE-588)4029783-4</subfield>
+	      <subfield code="0">https://d-nb.info/gnd/4029783-4</subfield>
+	      <subfield code="0">(DE-101)040297837</subfield>
+	      <subfield code="a">Karte</subfield>
+	      <subfield code="2">gnd-content</subfield>
+	    </datafield>
+	    <datafield tag="689" ind1="0" ind2="0">
+	      <subfield code="0">(DE-588)4098836-3</subfield>
+	      <subfield code="0">https://d-nb.info/gnd/4098836-3</subfield>
+	      <subfield code="0">(DE-101)040988368</subfield>
+	      <subfield code="D">g</subfield>
+	      <subfield code="a">Kun ming</subfield>
+	    </datafield>
+	    <datafield tag="689" ind1="0" ind2="1">
+	      <subfield code="0">(DE-588)4410551-4</subfield>
+	      <subfield code="0">https://d-nb.info/gnd/4410551-4</subfield>
+	      <subfield code="0">(DE-101)947599282</subfield>
+	      <subfield code="D">g</subfield>
+	      <subfield code="a">Imphal</subfield>
+	    </datafield>
+	    <datafield tag="689" ind1="0" ind2="2">
+	      <subfield code="0">(DE-588)3045331-8</subfield>
+	      <subfield code="0">https://d-nb.info/gnd/3045331-8</subfield>
+	      <subfield code="0">(DE-101)959518061</subfield>
+	      <subfield code="D">g</subfield>
+	      <subfield code="a">Panzhihua, Sichuan</subfield>
+	    </datafield>
+	    <datafield tag="689" ind1="0" ind2="3">
+	      <subfield code="0">(DE-588)6141624-1</subfield>
+	      <subfield code="0">https://d-nb.info/gnd/6141624-1</subfield>
+	      <subfield code="0">(DE-101)1004539940</subfield>
+	      <subfield code="D">g</subfield>
+	      <subfield code="a">Dali</subfield>
+	      <subfield code="g">Yunnan</subfield>
+	    </datafield>
+	    <datafield tag="689" ind1="0" ind2="4">
+	      <subfield code="0">(DE-588)4726756-2</subfield>
+	      <subfield code="0">https://d-nb.info/gnd/4726756-2</subfield>
+	      <subfield code="0">(DE-101)967261988</subfield>
+	      <subfield code="D">g</subfield>
+	      <subfield code="a">Guiyang</subfield>
+	      <subfield code="g">Guizhou</subfield>
+	    </datafield>
+	    <datafield tag="689" ind1="0" ind2="5">
+	      <subfield code="0">(DE-588)4174629-6</subfield>
+	      <subfield code="0">https://d-nb.info/gnd/4174629-6</subfield>
+	      <subfield code="0">(DE-101)041746295</subfield>
+	      <subfield code="D">s</subfield>
+	      <subfield code="a">Physische Geografie</subfield>
+	    </datafield>
+	    <datafield tag="689" ind1="0" ind2="6">
+	      <subfield code="0">(DE-588)4387561-0</subfield>
+	      <subfield code="0">https://d-nb.info/gnd/4387561-0</subfield>
+	      <subfield code="0">(DE-101)94564583X</subfield>
+	      <subfield code="D">s</subfield>
+	      <subfield code="a">Relief</subfield>
+	      <subfield code="g">Kartografie</subfield>
+	    </datafield>
+	    <datafield tag="689" ind1="0" ind2="7">
+	      <subfield code="0">(DE-588)4133697-5</subfield>
+	      <subfield code="0">https://d-nb.info/gnd/4133697-5</subfield>
+	      <subfield code="0">(DE-101)041336976</subfield>
+	      <subfield code="D">s</subfield>
+	      <subfield code="a">Topografie</subfield>
+	    </datafield>
+	    <datafield tag="689" ind1="0" ind2=" ">
+	      <subfield code="5">DE-101</subfield>
+	      <subfield code="5">DE-101</subfield>
+	    </datafield>
+	    <datafield tag="773" ind1="0" ind2="8">
+	      <subfield code="q">278</subfield>
+	      <subfield code="w">(DE-101)560611668</subfield>
+	    </datafield>
+	    <datafield tag="850" ind1=" " ind2=" ">
+	      <subfield code="a">DE-101a</subfield>
+	    </datafield>
+  </record>
+  <record xmlns="http://www.loc.gov/MARC21/slim" type="Bibliographic">
+    <leader>00000nam a2200000 c 4500</leader>
+    <controlfield tag="001">1200497457</controlfield>
+    <controlfield tag="003">DE-101</controlfield>
+    <controlfield tag="005">20200709213821.0</controlfield>
+    <controlfield tag="007">tu</controlfield>
+    <controlfield tag="008">191127s2020    gw ||||| |||| 10||||ger  </controlfield>
+    <datafield tag="015" ind1=" " ind2=" ">
+      <subfield code="a">19,N49</subfield>
+      <subfield code="2">dnb</subfield>
+    </datafield>
+    <datafield tag="016" ind1="7" ind2=" ">
+      <subfield code="2">DE-101</subfield>
+      <subfield code="a">1200497457</subfield>
+    </datafield>
+    <datafield tag="020" ind1=" " ind2=" ">
+      <subfield code="a">9783658288990</subfield>
+      <subfield code="c">Broschur : circa EUR 44.99 (DE), circa EUR 46.25 (AT), circa CHF 50.00 (freier Preis)</subfield>
+      <subfield code="9">978-3-658-28899-0</subfield>
+    </datafield>
+    <datafield tag="020" ind1=" " ind2=" ">
+      <subfield code="a">365828899X</subfield>
+      <subfield code="9">3-658-28899-X</subfield>
+    </datafield>
+    <datafield tag="024" ind1="3" ind2=" ">
+      <subfield code="a">9783658288990</subfield>
+    </datafield>
+    <datafield tag="028" ind1="5" ind2="2">
+      <subfield code="a">Bestellnummer: 978-3-658-28899-0</subfield>
+    </datafield>
+    <datafield tag="028" ind1="5" ind2="2">
+      <subfield code="a">Bestellnummer: 86996101</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(DE-599)DNB1200497457</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(OCoLC)1129465758</subfield>
+    </datafield>
+    <datafield tag="040" ind1=" " ind2=" ">
+      <subfield code="a">1245</subfield>
+      <subfield code="b">ger</subfield>
+      <subfield code="c">DE-101</subfield>
+      <subfield code="d">9999</subfield>
+      <subfield code="e">rda</subfield>
+    </datafield>
+    <datafield tag="041" ind1=" " ind2=" ">
+      <subfield code="a">ger</subfield>
+    </datafield>
+    <datafield tag="044" ind1=" " ind2=" ">
+      <subfield code="c">XA-DE-HE</subfield>
+    </datafield>
+    <datafield tag="082" ind1="7" ind2="4">
+      <subfield code="8">1\p</subfield>
+      <subfield code="a">320</subfield>
+      <subfield code="q">DE-101</subfield>
+      <subfield code="2">23sdnb</subfield>
+    </datafield>
+    <datafield tag="090" ind1=" " ind2=" ">
+      <subfield code="a">b</subfield>
+    </datafield>
+    <datafield tag="111" ind1="2" ind2=" ">
+      <subfield code="0">(DE-588)1212685172</subfield>
+      <subfield code="0">https://d-nb.info/gnd/1212685172</subfield>
+      <subfield code="0">(DE-101)1212685172</subfield>
+      <subfield code="a">70 Jahre Rheinland-Pfalz: Historische Betrachtung und Politikwissenschaftliche Analyse</subfield>
+      <subfield code="g">Veranstaltung</subfield>
+      <subfield code="d">2017</subfield>
+      <subfield code="c">Mainz</subfield>
+      <subfield code="j">Verfasser</subfield>
+      <subfield code="4">aut</subfield>
+    </datafield>
+    <datafield tag="245" ind1="1" ind2="0">
+      <subfield code="a">70 Jahre Rheinland-Pfalz</subfield>
+      <subfield code="b">Historische Perspektiven und politikwissenschaftliche Analyse</subfield>
+      <subfield code="c">Manuela Glaab [und 4 andere] (Hrsg.)</subfield>
+    </datafield>
+    <datafield tag="264" ind1=" " ind2="1">
+      <subfield code="a">Wiesbaden</subfield>
+      <subfield code="b">Springer VS</subfield>
+      <subfield code="c">[2020]</subfield>
+    </datafield>
+    <datafield tag="300" ind1=" " ind2=" ">
+      <subfield code="a">VIII, 586 Seiten</subfield>
+      <subfield code="b">Illustrationen</subfield>
+      <subfield code="c">21 cm, 770 g</subfield>
+    </datafield>
+    <datafield tag="336" ind1=" " ind2=" ">
+      <subfield code="a">Text</subfield>
+      <subfield code="b">txt</subfield>
+      <subfield code="2">rdacontent</subfield>
+    </datafield>
+    <datafield tag="337" ind1=" " ind2=" ">
+      <subfield code="a">ohne Hilfsmittel zu benutzen</subfield>
+      <subfield code="b">n</subfield>
+      <subfield code="2">rdamedia</subfield>
+    </datafield>
+    <datafield tag="338" ind1=" " ind2=" ">
+      <subfield code="a">Band</subfield>
+      <subfield code="b">nc</subfield>
+      <subfield code="2">rdacarrier</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">(Produktform)Paperback / softback</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">(BISAC Subject Heading)POL010000</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">(BISAC Subject Heading)JPA</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">Bundesland</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">Föderalismus</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">Helmut Kohl</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">Kurt Beck</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">Landesgeschichte</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">Landespolitik</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">Pfalz</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">Regieren</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">Rheinland</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">(BISAC Subject Heading)POL058000</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">(BISAC Subject Heading)POL028000</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">(BISAC Subject Heading)HIS010000</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">(BIC subject category)JP</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">(BIC subject category)JPH</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">(BIC subject category)HBJD</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">(Springer Nature Marketing Classification)B</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">(Springer Nature Subject Code)SC911080: Political History</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">(Springer Nature Subject Code)SC911190: German Politics</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">(Springer Nature Subject Code)SC911240: Legislative and Executive Politics</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">(Springer Nature Subject Code)SC717060: History of Germany and Central Europe</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">(Springer Nature Subject Collection)SUCO41174: Political Science and International Studies</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">(BISAC Subject Heading)POL010000</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">(BIC subject category)JPA</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">(VLB-WN)1731: Hardcover, Softcover / Politikwissenschaft/Allgemeines, Lexika</subfield>
+    </datafield>
+    <datafield tag="655" ind1=" " ind2="7">
+      <subfield code="0">(DE-588)1071861417</subfield>
+      <subfield code="0">https://d-nb.info/gnd/1071861417</subfield>
+      <subfield code="0">(DE-101)1071861417</subfield>
+      <subfield code="a">Konferenzschrift</subfield>
+      <subfield code="2">gnd-content</subfield>
+    </datafield>
+    <datafield tag="700" ind1="1" ind2=" ">
+      <subfield code="0">(DE-588)113094744</subfield>
+      <subfield code="0">https://d-nb.info/gnd/113094744</subfield>
+      <subfield code="0">(DE-101)113094744</subfield>
+      <subfield code="a">Glaab, Manuela</subfield>
+      <subfield code="d">1967-</subfield>
+      <subfield code="e">Herausgeber</subfield>
+      <subfield code="4">edt</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="700" ind1="1" ind2=" ">
+      <subfield code="a">Hering, Hendrik</subfield>
+      <subfield code="e">Herausgeber</subfield>
+      <subfield code="4">edt</subfield>
+    </datafield>
+    <datafield tag="700" ind1="1" ind2=" ">
+      <subfield code="a">Kißener, Michael</subfield>
+      <subfield code="e">Herausgeber</subfield>
+      <subfield code="4">edt</subfield>
+    </datafield>
+    <datafield tag="700" ind1="1" ind2=" ">
+      <subfield code="a">Schiffmann, Dieter</subfield>
+      <subfield code="e">Herausgeber</subfield>
+      <subfield code="4">edt</subfield>
+    </datafield>
+    <datafield tag="700" ind1="1" ind2=" ">
+      <subfield code="a">Storm, Monika</subfield>
+      <subfield code="e">Herausgeber</subfield>
+      <subfield code="4">edt</subfield>
+    </datafield>
+    <datafield tag="710" ind1="2" ind2=" ">
+      <subfield code="0">(DE-588)1043386068</subfield>
+      <subfield code="0">https://d-nb.info/gnd/1043386068</subfield>
+      <subfield code="0">(DE-101)1043386068</subfield>
+      <subfield code="a">Springer Fachmedien Wiesbaden GmbH</subfield>
+      <subfield code="e">Verlag</subfield>
+      <subfield code="4">pbl</subfield>
+    </datafield>
+    <datafield tag="776" ind1="0" ind2="8">
+      <subfield code="i">Erscheint auch als</subfield>
+      <subfield code="n">Online-Ausgabe</subfield>
+      <subfield code="t">70 Jahre Rheinland-Pfalz</subfield>
+      <subfield code="d">Wiesbaden : Springer Fachmedien Wiesbaden, 2020</subfield>
+      <subfield code="h">Online-Ressource</subfield>
+      <subfield code="w">(DE-101)1211323307</subfield>
+      <subfield code="b">1. Auflage 2020</subfield>
+    </datafield>
+    <datafield tag="850" ind1=" " ind2=" ">
+      <subfield code="a">DE-101a</subfield>
+      <subfield code="a">DE-101b</subfield>
+    </datafield>
+    <datafield tag="856" ind1="4" ind2="2">
+      <subfield code="m">X:MVB</subfield>
+      <subfield code="q">text/html</subfield>
+      <subfield code="u">http://deposit.dnb.de/cgi-bin/dokserv?id=faddde4a8dc74e6cbd1f869ab586871b&amp;prov=M&amp;dok_var=1&amp;dok_ext=htm</subfield>
+      <subfield code="3">Inhaltstext</subfield>
+    </datafield>
+    <datafield tag="856" ind1="4" ind2="2">
+      <subfield code="m">X:MVB</subfield>
+      <subfield code="u">http://www.springer.com/</subfield>
+    </datafield>
+    <datafield tag="856" ind1="4" ind2="2">
+      <subfield code="m">B:DE-101</subfield>
+      <subfield code="q">application/pdf</subfield>
+      <subfield code="u">https://d-nb.info/1200497457/04</subfield>
+      <subfield code="3">Inhaltsverzeichnis</subfield>
+    </datafield>
+    <datafield tag="883" ind1="1" ind2=" ">
+      <subfield code="8">1\p</subfield>
+      <subfield code="a">maschinell gebildet</subfield>
+      <subfield code="d">20191127</subfield>
+      <subfield code="q">DE-101</subfield>
+    </datafield>
+    <datafield tag="925" ind1="r" ind2=" ">
+      <subfield code="a">ra</subfield>
+    </datafield>
+    <datafield tag="925" ind1="w" ind2=" ">
+      <subfield code="a">b</subfield>
+    </datafield>
+    <datafield tag="926" ind1="1" ind2=" ">
+      <subfield code="a">JPA</subfield>
+      <subfield code="o">93</subfield>
+      <subfield code="q">Publisher</subfield>
+      <subfield code="v">1.2</subfield>
+      <subfield code="x">Politikwissenschaft</subfield>
+    </datafield>
+    <datafield tag="926" ind1="2" ind2=" ">
+      <subfield code="a">NHT</subfield>
+      <subfield code="o">93</subfield>
+      <subfield code="q">Publisher</subfield>
+      <subfield code="v">1.2</subfield>
+      <subfield code="x">Geschichte: Ereignisse und Themen</subfield>
+    </datafield>
+    <datafield tag="926" ind1="2" ind2=" ">
+      <subfield code="a">JP</subfield>
+      <subfield code="o">93</subfield>
+      <subfield code="q">Publisher</subfield>
+      <subfield code="v">1.2</subfield>
+      <subfield code="x">Politik und Staat</subfield>
+    </datafield>
+    <datafield tag="926" ind1="2" ind2=" ">
+      <subfield code="a">JPH</subfield>
+      <subfield code="o">93</subfield>
+      <subfield code="q">Publisher</subfield>
+      <subfield code="v">1.2</subfield>
+      <subfield code="x">Politische Strukturen und Prozesse</subfield>
+    </datafield>
+    <datafield tag="926" ind1="2" ind2=" ">
+      <subfield code="a">NHD</subfield>
+      <subfield code="o">93</subfield>
+      <subfield code="q">Publisher</subfield>
+      <subfield code="v">1.2</subfield>
+      <subfield code="x">Europäische Geschichte</subfield>
+    </datafield>
+    <datafield tag="926" ind1="2" ind2=" ">
+      <subfield code="a">1DFG</subfield>
+      <subfield code="o">94</subfield>
+      <subfield code="q">Publisher</subfield>
+      <subfield code="v">1.2</subfield>
+      <subfield code="x">Deutschland</subfield>
+    </datafield>
+  </record>
+  
+  </collection>
