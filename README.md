@@ -83,24 +83,15 @@ __`get_subfields(record, '700, 'a')`__ -> returns all values of all subfields wi
 - at the moment there are seven methods for transforming the data
 - IDs with the prefix (DE-588) are the preferred choice when choosing an id out of a list
 
-### transform_to_string()
-- just joins all strings of a list with '; '
-- mostly used for stray values e.g. there should be only one contenttype, but in the case of two:
+methods: `transform_to_string()`, `transform_person()`, `transform_title()`, `transform_imprint()`, `transform_lib_subject()`, `transform_subject_pub()`, `transform_ddc_notation()`
 
-`transform_to_string(contenttype_list)` <br/> 
--> `Text; Audio`
-
-### transform_person()
+### example: transform_person()
 returns a list of dicts: a dict contains the name of the person and an id if possible
 
 `transform_person(person_datafields, role = 'editor')` <br/> 
 -> `[{ 'editor_name' : 'Glaab, Manuela', 'editor_id' : '(DE-588)113094744'}, {'editor_name' : 'Hering, Hendrik'}]`
 
-### transform_title(title_main, title_remainder)
-### transform_imprint(imprint_datafields)
-### transform_lib_subject(subject_lib_datafields, subject_auto_info_datafields)
-### transform_subject_pub(subject_pub_list)
-### transform_ddc_notation()
+### example: transform_ddc_notation()
 - returns the lists of dictionaries: ddc_subject_category, ddc_short_number, ddc_full_number
 - the values are assigned by using regex to one of the lists
 
