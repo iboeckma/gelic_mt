@@ -20,7 +20,7 @@ def bool_match(values_to_match_with, values_to_match_on):
             else: value_bools.append(False)
 
         # if any passed value of values_to_match_with is matched True, return True
-        return(boolean is True for boolean in value_bools)
+        return(any(boolean is True for boolean in value_bools))
 
     # one or both lists are is empty, no match possible
     else: return(False)
