@@ -86,7 +86,9 @@ def get_author(record):
     datafields = get_datafields(record, '100')
     if datafields: return(datafields)
     # if there are editors, they count as author, but they are outputted with the function get_editor() not get_author()
-    elif ("Herausgeber" in get_subfields(record, '700', 'e')) or ("Hrsg." in get_subfields(record, '700', 'e')): return
+    role = get_subfields(record, '700', 'e')
+    if role: 
+        if ("Herausgeber" in role) or ("Hrsg." in role): return
     else:
         datafields = get_datafields(record, '110')
         if datafields: return(datafields)
@@ -102,8 +104,9 @@ def get_editor(record):
     if datafields: 
         editor_datafields = []
         for datafield_dict in datafields:
-            if ('; '.join(datafield_dict['e']) == 'Herausgeber') or ('; '.join(datafield_dict['e']) == 'Hrsg.'):
-                editor_datafields.append(datafield_dict)
+            role = get_subfields(record, '700', 'e')
+            if role: 
+                if ("Herausgeber" in role) or ("Hrsg." in role): editor_datafields.append(datafield_dict)
         return(editor_datafields)
 
 # -------------------------------------------- #

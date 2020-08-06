@@ -51,13 +51,14 @@ def transform_imprint(imprint_datafields):
     imprints = []
     if imprint_datafields:
         for datafield_dict in imprint_datafields:
+            #print(datafield_dict['a'])
             imprint = {}
             if 'a' in datafield_dict: imprint['publication_place'] = '; '.join(datafield_dict['a'])
-            if 'b' in datafield_dict: imprint['publlisher'] = '; '.join(datafield_dict['b'])
+            if 'b' in datafield_dict: imprint['publisher'] = '; '.join(datafield_dict['b'])
             if 'c' in datafield_dict: imprint['publication_date'] = '; '.join(datafield_dict['c'])
 
-            if ('publication_place' in imprint) and ('publisher' in imprint) and ('publication_date' in imprint): 
-            	imprints.append(publication_place + ': ' + publisher + ', ' + publication_date)
+            if ('publication_place' in imprint.keys()) and ('publisher' in imprint.keys()) and ('publication_date' in imprint.keys()):
+                imprints.append(imprint['publication_place'] + ': ' + imprint['publisher'] + ', ' + imprint['publication_date'])
 
     return(imprints)
 
