@@ -26,7 +26,7 @@ Methods like `get_author()` use these functions with the specific rules for them
     
   </record>
 ```
-__`get_controlfields(record, '001')`__ -> all values of fields with the tag `001` are combined as strings in a list: `['1200497457']`
+__`get_controlfield(record, '001')`__ -> returns the value of the first controlfield with the wanted tag as string: `'1200497457'`
 
 ### datafields
 ```xml

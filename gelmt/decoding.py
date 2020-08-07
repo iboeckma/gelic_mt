@@ -2,17 +2,13 @@
 
 # ------------------------------------------------------------------------------------------- #
 
-# returns a list of strings, each string is a value of a datafield with the wanted tag
+# returns the value of the first controlfield with the wanted tag as string
 
-def get_controlfields(record, wanted_tag):
-    collection = []
-    
+def get_controlfield(record, wanted_tag):
     for datafield in record: 
         datafield_tag = datafield.get('tag')
         
-        if datafield_tag == wanted_tag: collection.append(datafield.text)
-    
-    return(collection)
+        if datafield_tag == wanted_tag: return(datafield.text)
 
 # -------------------------------------------- #
 
