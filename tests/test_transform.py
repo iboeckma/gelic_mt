@@ -78,8 +78,8 @@ with open("data/test_transformed_corpus.json", "w") as f:  # open our file for w
         #print(json.dumps(transformed_record, indent=4))
 
         # JSON encode each element and write it to the file
-        #json.dump(transformed_record, f, ensure_ascii=False, indent=4) # problems with [Artikel 
-        json.dump(transformed_record, f, indent=4)
+        json.dump(transformed_record, f, ensure_ascii=False, indent=4) # problems with [Artikel 
+        #json.dump(transformed_record, f, indent=4)
         
         f.write(",\n") # close the element entry with a comma and a new line
         
