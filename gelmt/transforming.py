@@ -12,8 +12,8 @@ import re
 # used for: id, contenttype, extent, series 
 
 def transform_to_string(list_or_string):
-	if type(list_or_string) is str: return(list_or_string)
-	elif type(list_or_string) is list: return('; '.join(list_or_string))
+    if type(list_or_string) is str: return(list_or_string)
+    elif type(list_or_string) is list: return('; '.join(list_or_string))
 
 # -------------------------------------------- #
 
@@ -69,29 +69,29 @@ def transform_lib_subject(subject_lib_datafields, subject_auto_info_datafields):
     subject_int = []
 
     if subject_lib_datafields:
-	    for datafield_dict in subject_lib_datafields:
-	        
-	        # only auto subjects have the datafield_dict key '8'
-	        try:
-	            datafield_dict['8']
-	            subject = {}
-	            for info_dict in subject_auto_info_datafields: 
-	                for k, v in info_dict.items():
-	                    # if the value of info_dict is the same as the value of the datafield dict with key 8,
-	                    # then the information of info_dict fits the subject of datafield_dict
-	                    if v == datafield_dict['8']:
-	                        if 'a' in datafield_dict: subject['subject_auto_name'] = '; '.join(datafield_dict['a'])
-	                        if '0' in datafield_dict: subject['subject_auto_id'] = datafield_dict['0'][0]
-	                        if 'c' in info_dict: subject['subject_auto_conf'] = '; '.join(info_dict['c'])
-	                        if 'd' in info_dict: subject['subject_auto_crea'] = '; '.join(info_dict['d'])
-	            if subject: subject_auto.append(subject)
-	        
-	        # int_subject
-	        except KeyError:
-	            subject = {}
-	            if 'a' in datafield_dict: subject['subject_int_name'] = '; '.join(datafield_dict['a'])
-	            if '0' in datafield_dict: subject['subject_int_id'] = datafield_dict['0'][0]
-	            if subject: subject_int.append(subject)
+        for datafield_dict in subject_lib_datafields:
+            
+            # only auto subjects have the datafield_dict key '8'
+            try:
+                datafield_dict['8']
+                subject = {}
+                for info_dict in subject_auto_info_datafields: 
+                    for k, v in info_dict.items():
+                        # if the value of info_dict is the same as the value of the datafield dict with key 8,
+                        # then the information of info_dict fits the subject of datafield_dict
+                        if v == datafield_dict['8']:
+                            if 'a' in datafield_dict: subject['subject_auto_name'] = '; '.join(datafield_dict['a'])
+                            if '0' in datafield_dict: subject['subject_auto_id'] = datafield_dict['0'][0]
+                            if 'c' in info_dict: subject['subject_auto_conf'] = '; '.join(info_dict['c'])
+                            if 'd' in info_dict: subject['subject_auto_crea'] = '; '.join(info_dict['d'])
+                if subject: subject_auto.append(subject)
+            
+            # int_subject
+            except KeyError:
+                subject = {}
+                if 'a' in datafield_dict: subject['subject_int_name'] = '; '.join(datafield_dict['a'])
+                if '0' in datafield_dict: subject['subject_int_id'] = datafield_dict['0'][0]
+                if subject: subject_int.append(subject)
     
     # remove duplicates
     if subject_auto: subject_auto = [dict(t) for t in {tuple(d.items()) for d in subject_auto}]
@@ -139,5 +139,4 @@ def transform_ddc_notation(ddc_notation_datafields):
     # full numbers have 3 digits, followed by a period and two or more digits e.g. 303.6252970956
     ddc_full_number = add_ddc(ddc_notation_datafields, '\d\d\d\.\d\d+')
 
-    return(ddc_subject_category, ddc_short_number, ddc_full_number)
-
+    return(ddc_subject_category, ddc_short_number, ddc_full_number) 

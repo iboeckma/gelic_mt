@@ -11,7 +11,7 @@ with open("data/test_transformed_corpus.json", "w") as f:  # open our file for w
     f.write("[")  # begin a JSON array
     for event, record in etree.iterparse(infile, tag="{http://www.loc.gov/MARC21/slim}record"):
         # decoding
-        id_list = decoding.get_id(record)
+        dnb_id = decoding.get_id(record)
         contenttype_list = decoding.get_contenttype(record)
         author_datafields = decoding.get_author(record)
         editor_datafields = decoding.get_editor(record)
@@ -30,7 +30,7 @@ with open("data/test_transformed_corpus.json", "w") as f:  # open our file for w
         
 
         # transforming
-        dnb_id = transforming.transform_to_string(id_list)
+        # (dnb_id)
         contenttype = transforming.transform_to_string(contenttype_list)
         author = transforming.transform_person(author_datafields, role = 'author')
         editor = transforming.transform_person(editor_datafields, role = 'editor')

@@ -61,7 +61,7 @@ def get_subfields(record, wanted_tag, wanted_code):
 # returns the id of a record as a string in a list, in case there is more than one id (which is not intended)
 
 def get_id(record):
-    return(get_controlfields(record, '001'))
+    return(get_controlfield(record, '001'))
 
 # -------------------------------------------- #
 
