@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<add>
+    <doc>
+        <field name="collection_s">dnb</field>
+        <field name="id">0974932698</field>
+        <field name="doctype_s">abh</field>
+        <field name="title_txt_de">Wissenssoziologie</field>
+        <field name="title_s">Wissenssoziologie</field>
+        <field name="author_ss">Maasen, Sabine</field>
+        <field name="imprint_ss">Bielefeld: Transcript, 2009</field>
+        <field name="notes_ss">2., komplett überarb. Aufl</field>
+        <field name="year_s">2009</field>
+        <field name="size_s">122 S.</field>
+        <field name="series_ss">Einsichten</field>
+        <field name="lang_ss">ger</field>
+        <field name="subject_gnd_ss">s Wissenssoziologie -- 9(DE-588)4066615-3</field>
+        <field name="subject_gnd_txt_de">s Wissenssoziologie -- 9(DE-588)4066615-3</field>
+        <field name="subject_vlb_ss">moderne Gesellschaft; Wissen; Wissenschaft; BC: Paperback; 1: Hardcover, Softcover, Karte; 744: Politik, Gesellschaft, Arbeit / Soziologie; Gesellschaft; Sozialität; Soziologische Theorie; Wissenschaftssoziologie; Soziologie; Einführung; Sociology of Knowledge; Society; Social Relations; Sociological Theory; Sociology of Science; Sociology; Introduction; SCI075000; JHBA; PDR; Wissenssoziologie; 300; SOC026000; JHB</field>
+        <field name="subject_vlb_txt_de">moderne Gesellschaft; Wissen; Wissenschaft; BC: Paperback; 1: Hardcover, Softcover, Karte; 744: Politik, Gesellschaft, Arbeit / Soziologie; Gesellschaft; Sozialität; Soziologische Theorie; Wissenschaftssoziologie; Soziologie; Einführung; Sociology of Knowledge; Society; Social Relations; Sociological Theory; Sociology of Science; Sociology; Introduction; SCI075000; JHBA; PDR; Wissenssoziologie; 300; SOC026000; JHB</field>
+        <field name="subject_auto_ss">s Wissenssoziologie; 040666158; 0.06773</field>
+        <field name="subject_auto_txt_de">s Wissenssoziologie; 040666158; 0.06773</field>
+        <field name="footnote_ss">Literaturverz. S. 102 - 122</field>
+        <field name="footnote_txt_de">Literaturverz. S. 102 - 122</field>
+        <field name="class_ddc_ss">001.01 -- c 001.01 -- eDDC22ger; 306.42 -- c 306.42 -- eDDC22ger</field>
+        <field name="class_ddc_txt_de">001.01 -- c 001.01 -- eDDC22ger; 306.42 -- c 306.42 -- eDDC22ger</field>
+        <field name="class_dnb_ss">000; 100; 300; 000; 100; 300</field>
+        <field name="class_dnb_txt_de">000; 100; 300; 000; 100; 300</field>
+        <field name="date_add_s"/>
+        <field name="date_edit_s"/>
+    </doc>
+    <doc>
+        <field name="collection_s">dnb</field>
+        <field name="id">01000001539</field>
+        <field name="doctype_s">abh</field>
+        <field name="title_txt_de">Lawinen-Know-How : der Bergführer rät ..</field>
+        <field name="title_s">Lawinen-Know-How : der Bergführer rät ..</field>
+        <field name="author_ss">Durner, Günter</field>
+        <field name="imprint_ss">[Garmisch-Partenkirchen]: AM-Berg-Verl., 2010</field>
+        <field name="notes_ss">3., überarb. Aufl</field>
+        <field name="year_s">2010</field>
+        <field name="size_s">72 S.; Ill., graph. Darst</field>
+        <field name="lang_ss">ger</field>
+        <field name="subject_gnd_ss">s Lawine -- 9(DE-588)4034792-8; f Ratgeber</field>
+        <field name="subject_gnd_txt_de">s Lawine -- 9(DE-588)4034792-8; f Ratgeber</field>
+        <field name="subject_vlb_ss">Lawine; Ski; Bergsteigen; Skitour; BF: Geheftet; 1444: Hardcover, Softcover / Ratgeber/Sport/Wintersport</field>
+        <field name="subject_vlb_txt_de">Lawine; Ski; Bergsteigen; Skitour; BF: Geheftet; 1444: Hardcover, Softcover / Ratgeber/Sport/Wintersport</field>
+        <field name="subject_auto_ss">s Lawine; 040347923; 0.05140</field>
+        <field name="subject_auto_txt_de">s Lawine; 040347923; 0.05140</field>
+        <field name="class_ddc_ss">551.57848 -- c 551.57848 -- eDDC22ger</field>
+        <field name="class_ddc_txt_de">551.57848 -- c 551.57848 -- eDDC22ger</field>
+        <field name="class_dnb_ss">550; 796; 550; 796</field>
+        <field name="class_dnb_txt_de">550; 796; 550; 796</field>
+        <field name="date_add_s"/>
+        <field name="date_edit_s"/>
+    </doc>
+    <doc>
+        <field name="collection_s">dnb</field>
+        <field name="id">0996663126</field>
+        <field name="doctype_s"/>
+        <field name="title_txt_de">800 Jahre Burkersdorf (1209 - 2009) : Festschrift</field>
+        <field name="title_s">800 Jahre Burkersdorf (1209 - 2009) : Festschrift</field>
+        <field name="author_ss">Reinhold, Frank</field>
+        <field name="imprint_ss">Langenweißbach: Beier &amp; Beran, 2009</field>
+        <field name="year_s">2009</field>
+        <field name="size_s">165 S.; Ill., Kt</field>
+        <field name="lang_ss">ger</field>
+        <field name="subject_gnd_ss">g Burkersdorf -- h Weida -- 9(DE-588)7581453-5; s Heimatkunde -- 9(DE-588)4127794-6</field>
+        <field name="subject_gnd_txt_de">g Burkersdorf -- h Weida -- 9(DE-588)7581453-5; s Heimatkunde -- 9(DE-588)4127794-6</field>
+        <field name="subject_vlb_ss">Ortsgeschichte von Burkersdorf bei Weida; CB: Karte, gefaltet; 1558: Hardcover, Softcover / Geschichte/Regionalgeschichte, Ländergeschichte</field>
+        <field name="subject_vlb_txt_de">Ortsgeschichte von Burkersdorf bei Weida; CB: Karte, gefaltet; 1558: Hardcover, Softcover / Geschichte/Regionalgeschichte, Ländergeschichte</field>
+        <field name="class_ddc_ss">943.2223 -- c 943.2 -- eDDC22ger -- g 432223</field>
+        <field name="class_ddc_txt_de">943.2223 -- c 943.2 -- eDDC22ger -- g 432223</field>
+        <field name="class_dnb_ss">943; 914.3; 943; 914.3</field>
+        <field name="class_dnb_txt_de">943; 914.3; 943; 914.3</field>
+        <field name="date_add_s"/>
+        <field name="date_edit_s"/>
+    </doc>
+    <doc>
+        <field name="collection_s">dnb</field>
+        <field name="id">0996663061</field>
+        <field name="doctype_s"/>
+        <field name="title_txt_de">Deutsch für Zuwanderer : Rahmencurriculum für Integrationskurse ; Deutsch als Zweitsprache</field>
+        <field name="title_s">Deutsch für Zuwanderer : Rahmencurriculum für Integrationskurse ; Deutsch als Zweitsprache</field>
+        <field name="author_ss">Buhlmann, Rosemarie</field>
+        <field name="imprint_ss">Berlin: Cornelsen, 2009</field>
+        <field name="notes_ss">1. Aufl</field>
+        <field name="year_s">2009</field>
+        <field name="size_s">138 S.; graph. Darst</field>
+        <field name="lang_ss">ger</field>
+        <field name="subject_gnd_ss">s Deutsch -- 9(DE-588)4113292-0; s Fremdsprache -- 9(DE-588)4018424-9; s Türken -- 9(DE-588)4061165-6; f Einführung</field>
+        <field name="subject_gnd_txt_de">s Deutsch -- 9(DE-588)4113292-0; s Fremdsprache -- 9(DE-588)4018424-9; s Türken -- 9(DE-588)4061165-6; f Einführung</field>
+        <field name="subject_vlb_ss">VLB-Schulbuch (Deutschland); BC: Paperback; 1870: Hardcover, Softcover / Schule, Lernen/Deutsch als Zweitsprache, Fremdsprache</field>
+        <field name="subject_vlb_txt_de">VLB-Schulbuch (Deutschland); BC: Paperback; 1870: Hardcover, Softcover / Schule, Lernen/Deutsch als Zweitsprache, Fremdsprache</field>
+        <field name="footnote_ss">Literaturverz. S. 130 - 136</field>
+        <field name="footnote_txt_de">Literaturverz. S. 130 - 136</field>
+        <field name="class_ddc_ss">438.249435 -- c 438 -- eDDC22ger -- k 824 -- m9435</field>
+        <field name="class_ddc_txt_de">438.249435 -- c 438 -- eDDC22ger -- k 824 -- m9435</field>
+        <field name="class_dnb_ss">430; 430</field>
+        <field name="class_dnb_txt_de">430; 430</field>
+        <field name="date_add_s"/>
+        <field name="date_edit_s"/>
+    </doc>
+    <doc>
+        <field name="collection_s">dnb</field>
+        <field name="id">0996663908</field>
+        <field name="doctype_s"/>
+        <field name="title_txt_de">N&amp;#283;m&amp;#269;ina pro léka&amp;#345;e : manuál pro praxi</field>
+        <field name="title_s">N&amp;#283;m&amp;#269;ina pro léka&amp;#345;e : manuál pro praxi</field>
+        <field name="author_ss">Mokro&amp;#353;ová, Ivana; Ba&amp;#353;tová, Lucie</field>
+        <field name="imprint_ss">Praha: Grada Publ., 2009</field>
+        <field name="notes_ss">1. vyd</field>
+        <field name="year_s">2009</field>
+        <field name="size_s">552 S.; Ill., graph. Darst</field>
+        <field name="lang_ss">ger; acze</field>
+        <field name="subject_gnd_ss">s Deutsch -- 9(DE-588)4113292-0; s Fremdsprache -- 9(DE-588)4018424-9; s Fachsprache -- 9(DE-588)4016216-3; s Medizin -- 9(DE-588)4038243-6; s Tschechen -- 9(DE-588)4061083-4; f Einführung</field>
+        <field name="subject_gnd_txt_de">s Deutsch -- 9(DE-588)4113292-0; s Fremdsprache -- 9(DE-588)4018424-9; s Fachsprache -- 9(DE-588)4016216-3; s Medizin -- 9(DE-588)4038243-6; s Tschechen -- 9(DE-588)4061083-4; f Einführung</field>
+        <field name="footnote_ss">Text teilw. dt. und tschech. - Literaturangaben</field>
+        <field name="footnote_txt_de">Text teilw. dt. und tschech. - Literaturangaben</field>
+        <field name="class_ddc_ss">438.24918602461 -- c 438 -- eDDC22ger -- k 824 -- m9186 -- f 024</field>
+        <field name="class_ddc_txt_de">438.24918602461 -- c 438 -- eDDC22ger -- k 824 -- m9186 -- f 024</field>
+        <field name="class_dnb_ss">430; 610; 430; 610</field>
+        <field name="class_dnb_txt_de">430; 610; 430; 610</field>
+        <field name="date_add_s"/>
+        <field name="date_edit_s"/>
+    </doc>
+    <doc>
+        <field name="collection_s">dnb</field>
+        <field name="id">099666789X</field>
+        <field name="doctype_s"/>
+        <field name="title_txt_de">Islam, state, and society in independent Azerbaijan : between historical legacy and post-Soviet reality with special reference to Baku and its environs</field>
+        <field name="title_s">Islam, state, and society in independent Azerbaijan : between historical legacy and post-Soviet reality with special reference to Baku and its environs</field>
+        <field name="author_ss">Sattarov, Rufat</field>
+        <field name="imprint_ss">Wiesbaden: Reichert, 2009</field>
+        <field name="year_s">2009</field>
+        <field name="size_s">XXIX, 366 S.; Ill</field>
+        <field name="series_ss">Caucasian studies ; 11</field>
+        <field name="lang_ss">eng</field>
+        <field name="subject_gnd_ss">g Aserbaidschan -- 9(DE-588)4068887-2; s Islam -- 9(DE-588)4027743-4; s Staat -- 9(DE-588)4056618-3; s Gesellschaft -- 9(DE-588)4020588-5; z Geschichte 1918-2003</field>
+        <field name="subject_gnd_txt_de">g Aserbaidschan -- 9(DE-588)4068887-2; s Islam -- 9(DE-588)4027743-4; s Staat -- 9(DE-588)4056618-3; s Gesellschaft -- 9(DE-588)4020588-5; z Geschichte 1918-2003</field>
+        <field name="class_ddc_ss">297.27094754 -- c 297.27 -- eDDC22ger -- g 4754</field>
+        <field name="class_ddc_txt_de">297.27094754 -- c 297.27 -- eDDC22ger -- g 4754</field>
+        <field name="class_dnb_ss">290; 940; 290; 940</field>
+        <field name="class_dnb_txt_de">290; 940; 290; 940</field>
+        <field name="date_add_s"/>
+        <field name="date_edit_s"/>
+    </doc>
+    <doc>
+        <field name="collection_s">dnb</field>
+        <field name="id">0996671501</field>
+        <field name="doctype_s"/>
+        <field name="title_txt_de">Medien in der frühen Neuzeit</field>
+        <field name="title_s">Medien in der frühen Neuzeit</field>
+        <field name="author_ss">Würgler, Andreas</field>
+        <field name="imprint_ss">München: Oldenbourg, 2009</field>
+        <field name="year_s">2009</field>
+        <field name="size_s">XII, 174 S.</field>
+        <field name="series_ss">Enzyklopädie deutscher Geschichte ; 85</field>
+        <field name="lang_ss">ger</field>
+        <field name="subject_gnd_ss">g Deutschland -- 9(DE-588)4011882-4; s Druckmedien -- 9(DE-588)4193179-8; z Sozialgeschichte 1300-1800</field>
+        <field name="subject_gnd_txt_de">g Deutschland -- 9(DE-588)4011882-4; s Druckmedien -- 9(DE-588)4193179-8; z Sozialgeschichte 1300-1800</field>
+        <field name="footnote_ss">Literaturverz. S. 133 - 158</field>
+        <field name="footnote_txt_de">Literaturverz. S. 133 - 158</field>
+        <field name="class_ddc_ss">943 -- c 943 -- eDDC22ger</field>
+        <field name="class_ddc_txt_de">943 -- c 943 -- eDDC22ger</field>
+        <field name="class_dnb_ss">943; 943</field>
+        <field name="class_dnb_txt_de">943; 943</field>
+        <field name="date_add_s"/>
+        <field name="date_edit_s"/>
+    </doc>
+    <doc>
+        <field name="collection_s">dnb</field>
+        <field name="id">0996673180</field>
+        <field name="doctype_s">abh</field>
+        <field name="title_txt_de">Geschichten-Hermeneutik : philosophische, literarische und theologische Provokationen im Denken von Wilhelm Schapp</field>
+        <field name="title_s">Geschichten-Hermeneutik : philosophische, literarische und theologische Provokationen im Denken von Wilhelm Schapp</field>
+        <field name="author_ss">Pohlmeyer, Markus</field>
+        <field name="imprint_ss">Berlin ; Münster: Lit, 2008</field>
+        <field name="notes_ss">2. korrigierte Aufl</field>
+        <field name="year_s">2008</field>
+        <field name="size_s">XI, 253 S.</field>
+        <field name="series_ss">Pontes ; 22</field>
+        <field name="lang_ss">ger</field>
+        <field name="subject_gnd_ss">p Schapp, Wilhelm -- d 1884-1969 -- 9(DE-588)118606476; s Narrativität -- 9(DE-588)4379691-6; s Phänomenologie -- 9(DE-588)4045660-2</field>
+        <field name="subject_gnd_txt_de">p Schapp, Wilhelm -- d 1884-1969 -- 9(DE-588)118606476; s Narrativität -- 9(DE-588)4379691-6; s Phänomenologie -- 9(DE-588)4045660-2</field>
+        <field name="subject_auto_ss">p Schapp, Wilhelm (Philosoph, 1884-1969); 118606476; 0.08333</field>
+        <field name="subject_auto_txt_de">p Schapp, Wilhelm (Philosoph, 1884-1969); 118606476; 0.08333</field>
+        <field name="subject_auto_ss">s Hermeneutik; 041289722; 0.07009</field>
+        <field name="subject_auto_txt_de">s Hermeneutik; 041289722; 0.07009</field>
+        <field name="class_ddc_ss">901 -- c 901 -- eDDC22ger</field>
+        <field name="class_ddc_txt_de">901 -- c 901 -- eDDC22ger</field>
+        <field name="class_dnb_ss">900; 900</field>
+        <field name="class_dnb_txt_de">900; 900</field>
+        <field name="date_add_s"/>
+        <field name="date_edit_s"/>
+    </doc>
+</add>

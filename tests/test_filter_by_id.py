@@ -7,7 +7,7 @@ import re
 infile = "data/test_input.xml"
 #infile = "data/test_corpus.xml"
 outputfile = "data/test_filtered_by_id.xml"
-wanted_ids = filtering.get_id_list('data/corpus.xml')
+wanted_ids = filtering.get_id_list('data/test_old_corpus.xml')
 print('id_list was created')
 
 # default way to open a xml-file when using lxml
