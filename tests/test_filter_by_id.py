@@ -1,7 +1,7 @@
 # test_filter_by_record_id.py
 
 from lxml import etree
-from gelmt import filtering, decoding
+from gelic_mt import filtering, decoding
 import re
 
 infile = "data/test_input.xml"

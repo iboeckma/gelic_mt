@@ -2,7 +2,7 @@
 
 from lxml import etree
 import json, re, os
-from gelmt import decoding, transforming, encoding
+from gelic_mt import decoding, transforming, encoding
 
 infile = "data/test_corpus.xml"
 #infile = "data/test_dnb_all_dnbmarc_20200213-1.mrc.xml"

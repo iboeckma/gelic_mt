@@ -1,5 +1,5 @@
-# German Library MARCXML Tools (GeLMT)
-GeLMT provides modules that help with _filtering_, _decoding_, _transforming_ and _encoding_ __MARCXML__ data of the __German National Library (DNB)__. The modules are relying on the library __[lxml](https://lxml.de/)__. The package was designed for building a pipeline for the project __[German Library Indexing Collection (GeLIC)](https://github.com/irgroup/gelic)__. For example a specific need of this collection is to preserve the difference between automatically indexed (machine) and intellectually indexed (librarian) subject terms.
+# German Library Indexing Collection MARCXML Tools (GeLIC MT)
+GeLIC MT provides modules that help with _filtering_, _decoding_, _transforming_ and _encoding_ __MARCXML__ data of the __German National Library (DNB)__. The modules are relying on the library __[lxml](https://lxml.de/)__. The package was designed for building a pipeline for the project __[German Library Indexing Collection (GeLIC)](https://github.com/irgroup/gelic)__. For example a specific need of this collection is to preserve the difference between automatically indexed (machine) and intellectually indexed (librarian) subject terms.
 
 ## Downloading
 Basic methods that scrape the MARCXML files of the [dnb website](https://data.dnb.de/DNB/), compare the checksum, ...

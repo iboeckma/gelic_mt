@@ -1,7 +1,7 @@
 # test_filter_no_fiction_but_subject.py
 
 from lxml import etree
-from gelmt import filtering, decoding
+from gelic_mt import filtering, decoding
 
 infile = "data/test_input.xml"
 #infile = "data/test_corpus.xml"
