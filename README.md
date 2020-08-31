@@ -1,8 +1,11 @@
 # German Library Indexing Collection MARCXML Tools (GeLIC MT)
-GeLIC MT provides modules that help with _filtering_, _decoding_, _transforming_ and _encoding_ __MARCXML__ data of the __German National Library (DNB)__. The modules are relying on the library __[lxml](https://lxml.de/)__. The package was designed for building a pipeline for the project __[German Library Indexing Collection (GeLIC)](https://github.com/irgroup/gelic)__. For example a specific need of this collection is to preserve the difference between automatically indexed (machine) and intellectually indexed (librarian) subject terms.
+GeLIC MT provides modules that help with _downloading_, _filtering_, _decoding_, _transforming_ and _encoding_ __MARCXML__ data of the __German National Library (DNB)__. The modules are relying on the library __[lxml](https://lxml.de/)__. The package was designed for building a pipeline for the project __[German Library Indexing Collection (GeLIC)](https://github.com/irgroup/gelic)__. For example a specific need of this collection is to preserve the difference between automatically indexed (machine) and intellectually indexed (librarian) subject terms.
 
 ## Downloading
-Basic methods that scrape the MARCXML files of the [dnb website](https://data.dnb.de/DNB/), compare the checksum, ...
+Three basic methods that scrape the MARCXML files of the [dnb website](https://data.dnb.de/DNB/) and verify the download: 
+1. `download()` - tries to download a file if it doesn't exist in the wanted directory 
+2. `create_checksum_dict()` - needs a file which is structured like the checksum-file which the DNB provides on their website; creates a dictionary with the filename as key and the sha256_hash as value
+3. `checkhash()` - if a checksum dictionary was created, the corresponding files can be verified after download
 
 ## Filtering
 There are three methods which can be helpful for filtering the data.
