@@ -4,14 +4,14 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="gelmt",
+    name="gelic_mt",
     version="0.0.1",
-    author="Ina Böckmann",
-    author_email="ina.boeckmann@smail.th-koeln.de",
-    description="German Library MARCXML Tools",
+    author="Information Retrieval Research Group",
+    author_email="",
+    description="German Library Indexing Collection MARCXML Tools",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/pypa/sampleproject",
+    url="",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
