@@ -79,15 +79,22 @@ def get_contenttype(record):
 # 3. if there are neither authors, nor editors, check for organisations which are then returned as authors
 
 def get_author(record):
-    datafields = get_datafields(record, '100')
-    if datafields: return(datafields)
+    aut_datafields = get_datafields(record, '100')
+    other_datafields = get_datafields(record, '700')
     # if there are editors, they count as author, but they are outputted with the function get_editor() not get_author()
-    role = get_subfields(record, '700', 'e')
-    if role: 
-        if ("Herausgeber" in role) or ("Hrsg." in role): return
+    editor = False
+    for d in other_datafields:
+        # if there is more than one author, the other authors are handled with field 700
+        try: 
+            if "aut" in d.get('4'): aut_datafields.append(d)
+            elif "edt" in d.get('4'): editor = True
+        except TypeError: continue
+    if aut_datafields: return(aut_datafields)
+    elif editor == True: return
+    # if there are no authors in fields 100 and 700 and no editors: organisation sould be handled as author
     else:
-        datafields = get_datafields(record, '110')
-        if datafields: return(datafields)
+        org_datafields = get_datafields(record, '110')
+        if org_datafields: return(org_datafields)
 
 # -------------------------------------------- #
 
@@ -101,7 +108,7 @@ def get_editor(record):
         editor_datafields = []
         for datafield_dict in datafields:
             role = get_subfields(record, '700', 'e')
-            if role: 
+            if role:
                 if ("Herausgeber" in role) or ("Hrsg." in role): editor_datafields.append(datafield_dict)
         return(editor_datafields)
 
