@@ -179,16 +179,17 @@ def get_notes(record):
 
 def get_lib_subject(record):
     # all tags between 600 and 655 except 653 (publisher) qualify as auto or int subjects
-    set_without_pub = set(range(600, 655)) - set([653])
+    set_without_pub = set(range(600, 656)) - set([653])
     
     subject_lib_datafields = []
-    for num in set_without_pub:
-        datafields = get_datafields(record, str(num))
+    for tag in set_without_pub:
+        datafields = get_datafields(record, str(tag))
         if datafields: subject_lib_datafields.extend(datafields)
             
     # 883 fields have information about auto subjects
     subject_auto_info_datafields = get_datafields(record, '883')
     
+    print(subject_lib_datafields)
     return(subject_lib_datafields, subject_auto_info_datafields)
 
 # -------------------------------------------- #
