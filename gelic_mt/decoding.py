@@ -188,8 +188,7 @@ def get_lib_subject(record):
             
     # 883 fields have information about auto subjects
     subject_auto_info_datafields = get_datafields(record, '883')
-    
-    print(subject_lib_datafields)
+
     return(subject_lib_datafields, subject_auto_info_datafields)
 
 # -------------------------------------------- #
