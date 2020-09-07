@@ -1,6 +1,18 @@
 # German Library Indexing Collection MARCXML Tools (GeLIC MT)
 GeLIC MT provides modules that help with _downloading_, _filtering_, _decoding_, _transforming_ and _encoding_ __MARCXML__ data of the __German National Library (DNB)__. The modules are relying on the library __[lxml](https://lxml.de/)__. The package was designed for building a pipeline for the project __[German Library Indexing Collection (GeLIC)](https://github.com/irgroup/gelic)__. For example a specific need of this collection is to preserve the difference between automatically indexed (machine) and intellectually indexed (librarian) subject terms.
 
+### Table of Content
+1. [How to install](#how-to-install)
+2. [How to get started](#how-to-get-started)
+3. [Downloading](#downloading) 
+4. [Filtering](#filtering)
+5. [Decoding](#decoding)
+   - [controlfields](#controlfields)
+   - [datafields](#datafields)
+   - [subfileds](#subfields)
+6. [Transforming](#transforming)
+7. [Encoding](#encoding)
+
 ## How to install
 First, clone the repo and change into the directory of the repository:
 ```
@@ -14,7 +26,7 @@ pip install -r requirements.txt
 ```
 
 ## How to get started
-There are a few test scripts in /tests. After following the instructions of [How to install](how-to-install) the scripts are executable. They can offer you some examples how to work with the modules:
+There are a few test scripts in /tests. After following the instructions of [How to install](#how-to-install) the scripts are executable. They can offer you some examples how to work with the modules:
 - `test_downloading.py`: downloads and verifies the newest marcxml files of https://data.dnb.de/DNB/
 - `test_filter_by_id.py`: gets the old ids of `data/test_old_corpus.xml` and compares them with the ids in test_input.xml; results in `data/test_filtered_by_id.xml`
 - `test_filter_no_fiction_but_subject.py`: filters out fiction and school textbooks records as well as records without subjects that were assigned by the DNB of `data/test_input.xml`; results in `data/test_filtered.xml`
