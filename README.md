@@ -1,6 +1,54 @@
 # German Library Indexing Collection MARCXML Tools (GeLIC MT)
 GeLIC MT provides modules that help with _downloading_, _filtering_, _decoding_, _transforming_ and _encoding_ __MARCXML__ data of the __German National Library (DNB)__. The modules are relying on the library __[lxml](https://lxml.de/)__. The package was designed for building a pipeline for the project __[German Library Indexing Collection (GeLIC)](https://github.com/irgroup/gelic)__. For example a specific need of this collection is to preserve the difference between automatically indexed (machine) and intellectually indexed (librarian) subject terms.
 
+## How to install
+First, clone the repo and change into the directory of the repository:
+```
+git clone https://github.com/iboeckma/gelic_mt.git
+cd gelic_mt
+```
+Then install gelic_mt and the required packages for gelic_mt:
+```
+pip install .
+pip install -r requirements.txt
+```
+
+## How to get started
+There are a few test scripts in /tests. After following the instructions of [How to install](how-to-install) the scripts are executable. They can offer you some examples how to work with the modules:
+- `test_downloading.py`: downloads and verifies the newest marcxml files of https://data.dnb.de/DNB/
+- `test_filter_by_id.py`: gets the old ids of `data/test_old_corpus.xml` and compares them with the ids in test_input.xml; results in `data/test_filtered_by_id.xml`
+- `test_filter_no_fiction_but_subject.py`: filters out fiction and school textbooks records as well as records without subjects that were assigned by the DNB of `data/test_input.xml`; results in `data/test_filtered.xml`
+- `test_decode-transform-encode.py`: decodes, transforms and encodes the records of `data/test_corpus.xml`
+
+So for writing your own pipeline you might want to start with the following:
+```
+from lxml import etree
+from gelic_mt import decoding, transforming, encoding
+
+infile = 'your_file.xml'
+
+for event, record in etree.iterparse(infile, tag="{http://www.loc.gov/MARC21/slim}record"):
+  # decode something of the infile
+  record_id = decoding.get_id(record)
+  title_main, title_remainder = decoding.get_title(record)
+  
+  # transform something like the title
+  title = transforming.transform_title(title_main, title_remainder) # merges the title, separated by ' : '
+  
+  # encode it
+  transformed_record = {}
+  if record_id: transformed_record['id'] = encoding.encode(record_id)
+  if title: transformed_record['title'] = encoding.encode(title)
+  
+  print(transformed_record)
+  
+  # make sure that your memory doesn't blow up:
+  record.clear()
+  
+  while record.getprevious() is not None:
+    del record.getparent()[0]
+```
+
 ## Downloading
 Three basic methods that scrape the MARCXML files of the [dnb website](https://data.dnb.de/DNB/) and verify the download: 
 1. `download()` - tries to download a file if it doesn't exist in the wanted directory 
