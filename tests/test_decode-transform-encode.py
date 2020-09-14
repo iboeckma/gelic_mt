@@ -12,7 +12,7 @@ with open("data/test_transformed_corpus.json", "w") as f:  # open our file for w
     for event, record in etree.iterparse(infile, tag="{http://www.loc.gov/MARC21/slim}record"):
         # decoding
         dnb_id = decoding.get_id(record)
-        contenttype_list = decoding.get_contenttype(record)
+        contenttype = decoding.get_contenttype(record)
         author_datafields = decoding.get_author(record)
         editor_datafields = decoding.get_editor(record)
         title_main, title_remainder = decoding.get_title(record)
@@ -22,7 +22,7 @@ with open("data/test_transformed_corpus.json", "w") as f:  # open our file for w
         isbn = decoding.get_isbn(record)
         issn = decoding.get_issn(record)
         lang = decoding.get_lang(record)
-        series_list = decoding.get_series(record)
+        series = decoding.get_series(record)
         notes = decoding.get_notes(record)
         subject_lib_datafields, subject_auto_info_datafields = decoding.get_subject_lib(record)
         subject_vlb_list = decoding.get_subject_vlb(record)
@@ -31,17 +31,17 @@ with open("data/test_transformed_corpus.json", "w") as f:  # open our file for w
 
         # transforming
         # (dnb_id)
-        contenttype = transforming.transform_to_string(contenttype_list)
+        # (contenttype)
         author = transforming.transform_person(author_datafields, role = 'author')
         editor = transforming.transform_person(editor_datafields, role = 'editor')
         title = transforming.transform_title(title_main, title_remainder)
         # (edition)
         imprint = transforming.transform_imprint(imprint_datafields)
-        extent = transforming.transform_to_string(extent)
+        # (extent)
         # (isbn)
         # (issn)
         # (lang)
-        series = transforming.transform_to_string(series_list)
+        # (series)
         # (notes)
         subject_auto, subject_int = transforming.transform_subject_lib(subject_lib_datafields, subject_auto_info_datafields)
         subject_vlb = transforming.transform_subject_vlb(subject_vlb_list)

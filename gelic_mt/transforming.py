@@ -1,20 +1,10 @@
 # transforming.py
 
-# fields that are not transformed at the moment: edition, isbn, issn, lang, notes
+# fields that are not transformed at the moment: dnb_id, contenttype, edition, extent, isbn, issn, lang, series, notes
 
 import re
 
 # ------------------------------------------------------------------------------------------- #
-
-# returns passed value as string
-# if there is more than one value in the passed list, the items are separated by ';'
-# used for: id, contenttype, extent, series 
-
-def transform_to_string(list_or_string):
-    if type(list_or_string) is str: return(list_or_string)
-    elif type(list_or_string) is list: return('; '.join(list_or_string))
-
-# -------------------------------------------- #
 
 # returns a list of dictionaries with persons or None
 # a dictionary contains the name of the person and an id (ORCID or GND-ID) if possible
