@@ -25,7 +25,6 @@ def encode(thing_to_encode):
                     else: 
                         encoded_dict += " -- " + str(value)
                 encoded_list.append(unicodedata.normalize('NFC', encoded_dict))
-                #print(unicodedata.normalize('NFC', encoded_dict)) # only possible with pythn version 3.8, conda only support 3.7
             
             elif type(item) is str: encoded_list.append(unicodedata.normalize('NFC', item))
     elif type(thing_to_encode) is str: return(unicodedata.normalize('NFC', thing_to_encode))

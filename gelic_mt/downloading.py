@@ -33,8 +33,7 @@ def checkhash(filepath, file, checksum_dict):
         if calculated_hash == dnb_hash: 
             print('hash of the downloaded file and the checksum_dict match')
             return
-        else:
-            sys.exit("hash of the downloaded file and the checksum_dict don't match")
+        else: sys.exit("hash of the downloaded file and the checksum_dict don't match")
 
     else: sys.exit("create_checksum_dict before trying to checkhash a file")
 
@@ -51,8 +50,7 @@ def download(url, file, dir_path):
         resource = requests.get(url_to_download)
 
         # check if download was successful
-        if resource.status_code == 404:
-            sys.exit(file + " is not available for download")
+        if resource.status_code == 404: sys.exit(file + " is not available for download")
             
         else:
             # write downloaded resource to file 

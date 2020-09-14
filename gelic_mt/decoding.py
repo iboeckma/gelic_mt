@@ -41,7 +41,7 @@ def get_datafields(record, wanted_tag):
 # returns a list of strings; each string is a subfield_value of the wanted subfield code of the wanted datafield
 
 def get_subfields(record, wanted_tag, wanted_code):
-    # using a set so that there a no duplicate strings
+    # using a set so that there are no duplicate strings
     collection = set()
     
     for datafield in record: 
@@ -58,14 +58,14 @@ def get_subfields(record, wanted_tag, wanted_code):
 
 # ------------------------------------------------------------------------------------------- #
 
-# returns the id of a record as a string in a list, in case there is more than one id (which is not intended)
+# returns the id of a record as a string
 
 def get_id(record):
     return(get_controlfield(record, '001'))
 
 # -------------------------------------------- #
 
-# returns the contenttype of a record as a string in a list, in case there is more than one contenttype (which is not intended)
+# returns the contenttypes of a record as strings in a list
 
 def get_contenttype(record):
     return(get_subfields(record, '336', 'a'))
@@ -80,10 +80,10 @@ def get_contenttype(record):
 
 def get_author(record):
     aut_datafields = get_datafields(record, '100')
-    other_datafields = get_datafields(record, '700')
+    role_datafields = get_datafields(record, '700')
     # if there are editors, they count as author, but they are outputted with the function get_editor() not get_author()
     editor = False
-    for d in other_datafields:
+    for d in role_datafields:
         # if there is more than one author, the other authors are handled with field 700
         try: 
             if "aut" in d.get('4'): aut_datafields.append(d)
@@ -91,10 +91,10 @@ def get_author(record):
         except TypeError: continue
     if aut_datafields: return(aut_datafields)
     elif editor == True: return
-    # if there are no authors in fields 100 and 700 and no editors: organisation sould be handled as author
+    # if there are no authors in fields 100 and 700 and no editors: organisation should be handled as author
     else:
         org_datafields = get_datafields(record, '110')
-        if org_datafields: return(org_datafields)
+        return(org_datafields)
 
 # -------------------------------------------- #
 
@@ -102,15 +102,15 @@ def get_author(record):
 # with the tag '700' is either 'Herausgeber' or 'Hrsg.' else None
 
 def get_editor(record):
-    datafields = get_datafields(record, '700')
+    role_datafields = get_datafields(record, '700')
 
-    if datafields: 
-        editor_datafields = []
-        for datafield_dict in datafields:
+    if role_datafields: 
+        edit_datafields = []
+        for role_dict in role_datafields:
             role = get_subfields(record, '700', 'e')
             if role:
-                if ("Herausgeber" in role) or ("Hrsg." in role): editor_datafields.append(datafield_dict)
-        return(editor_datafields)
+                if ("Herausgeber" in role) or ("Hrsg." in role): edit_datafields.append(role_dict)
+        return(edit_datafields)
 
 # -------------------------------------------- #
 
@@ -124,26 +124,29 @@ def get_title(record):
 
 # -------------------------------------------- #
 
-# returns the edition as list
+# returns the edition fields of a record as strings in a list
 
 def get_edition(record):
     return(get_subfields(record, '250', 'a'))
 
 # -------------------------------------------- #
 
+# returns the fields relevant for the imprint of a record as dicts in a list
+
 def get_imprint(record):
     return(get_datafields(record, '264'))
 
 # -------------------------------------------- #
 
+# returns the extent fields of a record as strings in a list
+
 def get_extent(record):
-    subfields = get_subfields(record, '300', 'a')
-    if subfields: 
-        return(subfields)
+    ext_subfields = get_subfields(record, '300', 'a')
+    if ext_subfields: return(ext_subfields)
     else:
         # sometimes instead of in field 300, there is information about the pages in field 773.g
         subfields = get_subfields(record, '773', 'g')
-        for subfield in subfields:
+        for subfield in ext_subfields:
             if 'pages' in subfield: return(subfield)
             # data sizes are in field 856.s
         else:
@@ -152,37 +155,51 @@ def get_extent(record):
 
 # -------------------------------------------- #
 
+# returns the isbn fields of a record as strings in a list
+
 def get_isbn(record):
     return(get_subfields(record, '020','a'))
 
 # -------------------------------------------- #
+
+# returns the issn fields of a record as strings in a list
 
 def get_issn(record):
     return(get_subfields(record, '022','a'))
 
 # -------------------------------------------- #
 
+# returns the language fields of a record as strings in a list
+
 def get_lang(record):
     return(get_subfields(record, '041','a'))
 
 # -------------------------------------------- #
+
+# returns the series fields of a record as strings in a list
 
 def get_series(record):
     return(get_subfields(record, '490','a'))
 
 # -------------------------------------------- #
 
+# returns the notes fields of a record as strings in a list
+
 def get_notes(record):
     return(get_subfields(record, '500', 'a'))
 
 # -------------------------------------------- #
 
-def get_lib_subject(record):
-    # all tags between 600 and 655 except 653 (publisher) qualify as auto or int subjects
-    set_without_pub = set(range(600, 656)) - set([653])
+# returns the fields that are relevant for the indexed librarian subject terms (automatic or intellectual) of a record as
+# two lists of dictionaries - one wth the subject index terms and one with provenance information
+# the latter only has information for automatic terms at the moment
+
+def get_subject_lib(record):
+    # all tags between 600 and 655 except 653 (vlb = publisher) qualify as auto or int subjects
+    set_without_vlb = set(range(600, 656)) - set([653])
     
     subject_lib_datafields = []
-    for tag in set_without_pub:
+    for tag in set_without_vlb:
         datafields = get_datafields(record, str(tag))
         if datafields: subject_lib_datafields.extend(datafields)
             
@@ -193,14 +210,17 @@ def get_lib_subject(record):
 
 # -------------------------------------------- #
 
-def get_pub_subject(record):
+# returns the fields that contain vlb subject terms of a record as strings in a list
+
+def get_subject_vlb(record):
     return(get_subfields(record, '653', 'a'))    
 
 # -------------------------------------------- #
 
-# fields 82-84 can have ddc notations
+# returns the ddc notation fields as dicts in a list
 
 def get_ddc_notation(record):
+    # fields 82-84 can have ddc notations
     datafields = get_datafields(record, '082')
     datafields += get_datafields(record, '083')
     datafields += get_datafields(record, '084')

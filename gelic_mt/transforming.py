@@ -1,7 +1,6 @@
 # transforming.py
 
 # fields that are not transformed at the moment: edition, isbn, issn, lang, notes
-# possibilities: return only isbn13 if possible, else return another isbn
 
 import re
 
@@ -34,7 +33,7 @@ def transform_person(person_datafields, role = 'person'):
 
 # returns the main title and remainder as a string, separated by ' : '
 # if there is more than one main title (which is not intended), they are separated by ' ; '
-# if there is more than one title remainder they are already separated by ' ; ' 
+# if there is more than one title remainder they should be already separated by ' ; '
 # but in the case of a stray title remainder, they are also added separated by ' ; ' by the method
 
 def transform_title(title_main, title_remainder):
@@ -64,14 +63,18 @@ def transform_imprint(imprint_datafields):
 
 # -------------------------------------------- #
 
-def transform_lib_subject(subject_lib_datafields, subject_auto_info_datafields):
+# returns the separated intellectual and automatic subjects as lists of dicts
+# each subject term is in a dict with the preferred name and the id
+# in case of the automatic subject terms there is also the confidence value and when the subject term was assigned
+
+def transform_subject_lib(subject_lib_datafields, subject_auto_info_datafields):
     subject_auto = []
     subject_int = []
 
     if subject_lib_datafields:
         for datafield_dict in subject_lib_datafields:
             
-            # only auto subjects have the datafield_dict key '8'
+            # at the moment (2020-09-14) only auto subjects have the datafield_dict key '8'
             try:
                 datafield_dict['8']
                 subject = {}
@@ -80,7 +83,7 @@ def transform_lib_subject(subject_lib_datafields, subject_auto_info_datafields):
                         # if the value of info_dict is the same as the value of the datafield dict with key 8,
                         # then the information of info_dict fits the subject of datafield_dict
                         if v == datafield_dict['8']:
-                            if 'a' in datafield_dict: subject['subject_auto_name'] = '; '.join(datafield_dict['a'])
+                            if 'a' in datafield_dict: subject['subject_auto_pref'] = '; '.join(datafield_dict['a'])
                             if '0' in datafield_dict: subject['subject_auto_id'] = datafield_dict['0'][0]
                             if 'c' in info_dict: subject['subject_auto_conf'] = '; '.join(info_dict['c'])
                             if 'd' in info_dict: subject['subject_auto_crea'] = '; '.join(info_dict['d'])
@@ -89,7 +92,7 @@ def transform_lib_subject(subject_lib_datafields, subject_auto_info_datafields):
             # int_subject
             except KeyError:
                 subject = {}
-                if 'a' in datafield_dict: subject['subject_int_name'] = '; '.join(datafield_dict['a'])
+                if 'a' in datafield_dict: subject['subject_int_pref'] = '; '.join(datafield_dict['a'])
                 if '0' in datafield_dict: subject['subject_int_id'] = datafield_dict['0'][0]
                 if subject: subject_int.append(subject)
     
@@ -101,14 +104,20 @@ def transform_lib_subject(subject_lib_datafields, subject_auto_info_datafields):
 
 # -------------------------------------------- #
 
-def transform_subject_pub(subject_pub_list):
+# returns the vlb subects without the VLB prefix as list of strings
+
+def transform_subject_vlb(subject_vlb_list):
     regexed_subjects = []
-    for subject in subject_pub_list:
+    for subject in subject_vlb_list:
         regexed_subject = re.sub('^\(VLB\-\w\w\)', '', subject)
         regexed_subjects.append(regexed_subject)
     return(regexed_subjects)
 
 # -------------------------------------------- #
+
+# return the ddc_notations separated into subject categories, short numbers and full numbers
+# they are structured as list of dicts
+# beside the number, the provenance is added to a ddc-dict 
 
 def transform_ddc_notation(ddc_notation_datafields):
 

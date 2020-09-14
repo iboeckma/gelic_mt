@@ -24,8 +24,8 @@ with open("data/test_transformed_corpus.json", "w") as f:  # open our file for w
         lang = decoding.get_lang(record)
         series_list = decoding.get_series(record)
         notes = decoding.get_notes(record)
-        subject_lib_datafields, subject_auto_info_datafields = decoding.get_lib_subject(record)
-        subject_pub_list = decoding.get_pub_subject(record)
+        subject_lib_datafields, subject_auto_info_datafields = decoding.get_subject_lib(record)
+        subject_vlb_list = decoding.get_subject_vlb(record)
         ddc_notation_datafields = decoding.get_ddc_notation(record)
         
 
@@ -43,8 +43,8 @@ with open("data/test_transformed_corpus.json", "w") as f:  # open our file for w
         # (lang)
         series = transforming.transform_to_string(series_list)
         # (notes)
-        subject_auto, subject_int = transforming.transform_lib_subject(subject_lib_datafields, subject_auto_info_datafields)
-        subject_pub = transforming.transform_subject_pub(subject_pub_list)
+        subject_auto, subject_int = transforming.transform_subject_lib(subject_lib_datafields, subject_auto_info_datafields)
+        subject_vlb = transforming.transform_subject_vlb(subject_vlb_list)
         ddc_subject_category, ddc_short_number, ddc_full_number = transforming.transform_ddc_notation(ddc_notation_datafields)
 
 
@@ -67,7 +67,7 @@ with open("data/test_transformed_corpus.json", "w") as f:  # open our file for w
         if notes: transformed_record['notes'] = encoding.encode(notes)
         if subject_auto: transformed_record['subject_auto'] = encoding.encode(subject_auto)
         if subject_int: transformed_record['subject_int'] = encoding.encode(subject_int)
-        if subject_pub: transformed_record['subject_pub'] = encoding.encode(subject_pub)
+        if subject_vlb: transformed_record['subject_vlb'] = encoding.encode(subject_vlb)
         if ddc_subject_category: transformed_record['ddc_subject_category'] = encoding.encode(ddc_subject_category)
         if ddc_short_number: transformed_record['ddc_short_number'] = encoding.encode(ddc_short_number)
         if ddc_full_number: transformed_record['ddc_full_number'] = encoding.encode(ddc_full_number)
