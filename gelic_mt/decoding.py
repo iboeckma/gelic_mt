@@ -22,6 +22,10 @@ def get_datafields(record, wanted_tag):
         
         if datafield_tag == wanted_tag:
             subfields = {}
+
+            # indicator fields are not repeatable, so it's safe to just append them here
+            subfields['ind1'] = datafield.get('ind1')
+            subfields['ind2'] = datafield.get('ind2')
             
             for subfield in datafield:
                 subfield_code = subfield.get('code')
