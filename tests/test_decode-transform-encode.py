@@ -1,15 +1,30 @@
 # test_transform.py
 
+import json, re, os, datetime
 from lxml import etree
-import json, re, os
+from zipfile import ZipFile
 from gelic_mt import decoding, transforming, encoding
 
-infile = 'data/test_input.xml'
+start = datetime.datetime.now()
 
-with open("data/test_transformed_corpus.json", "w") as f:  # open our file for writing
+data_path = 'data/'
+tmp_path = data_path + 'tmp/'
+
+zipped_infile = 'test_input.xml.zip'
+unzipped_infile = 'test_input.xml'
+
+outputfile = 'test_transformed.json'
+
+with ZipFile(data_path + zipped_infile, 'r') as to_unzip:
+    # extract to_unzip to temp/
+    to_unzip.extractall(tmp_path)
+
+processing_counter = 0
+with open(data_path + outputfile, "w") as f:
     f.write("[")  # begin a JSON array
-    for event, record in etree.iterparse(infile, tag="{http://www.loc.gov/MARC21/slim}record"):
-        # decoding
+    for event, record in etree.iterparse(tmp_path + unzipped_infile, tag="{http://www.loc.gov/MARC21/slim}record"):
+        
+        # DECODING #
         dnb_id = decoding.get_id(record)
         contenttype = decoding.get_contenttype(record)
         author_datafields = decoding.get_author(record)
@@ -28,7 +43,7 @@ with open("data/test_transformed_corpus.json", "w") as f:  # open our file for w
         ddc_notation_datafields = decoding.get_ddc_notation(record)
         
 
-        # transforming
+        # TRANSFORMING #
         # (dnb_id)
         # (contenttype)
         author = transforming.transform_person(author_datafields, role = 'author')
@@ -47,9 +62,7 @@ with open("data/test_transformed_corpus.json", "w") as f:  # open our file for w
         ddc_subject_category, ddc_short_number, ddc_full_number = transforming.transform_ddc_notation(ddc_notation_datafields)
 
 
-
-
-        # encoding
+        # ENCODING #
         transformed_record = {'collection_s' : 'dnb'}
         if dnb_id: transformed_record['id'] = encoding.encode(dnb_id)
         if contenttype: transformed_record['contenttype_ss'] = encoding.encode(contenttype)
@@ -74,26 +87,31 @@ with open("data/test_transformed_corpus.json", "w") as f:  # open our file for w
         if ddc_subject_category: transformed_record['ddc_subject_category_ss'] = encoding.encode(ddc_subject_category)
         if ddc_short_number: transformed_record['ddc_short_number_ss'] = encoding.encode(ddc_short_number)
         if ddc_full_number: transformed_record['ddc_full_number_ss'] = encoding.encode(ddc_full_number)
-    
-
-        #print(transformed_record)
-        #print(json.dumps(transformed_record, ensure_ascii=False, indent=4))
-        #print(json.dumps(transformed_record, indent=4))
 
         # JSON encode each element and write it to the file
-        json.dump(transformed_record, f, ensure_ascii=False, indent=4) # problems with [Artikel 
-        #json.dump(transformed_record, f, indent=4)
+        json.dump(transformed_record, f, ensure_ascii=False, indent=4)
         
-        f.write(",\n") # close the element entry with a comma and a new line
+        # close the element entry with a comma and a new line
+        f.write(",\n") 
         
         record.clear()
         
-        # delete elements that have not the tag "{http://www.loc.gov/MARC21/slim}record"
-        # otherwise the memory blows up (https://stackoverflow.com/questions/16482382/lxml-and-fast-iter-eating-all-the-memory)
-        while record.getprevious() is not None:
-            del record.getparent()[0]
+        # delete elements that have not the tag "{http://www.loc.gov/MARC21/slim}record" otherwise the memory blows up 
+        while record.getprevious() is not None: del record.getparent()[0]
+        
+        processing_counter += 1
+        print(str(processing_counter) + '. record (' + str(dnb_id) + ') was processed')
     
     f.seek(0, os.SEEK_END) # to the end of the file
     f.seek(f.tell() - 2, os.SEEK_SET) # go backwards 2 bytes
     f.write("]")  # end the JSON array
     f.truncate()  # remove the rest
+
+os.system('rm -rf ' + tmp_path + '*')
+
+print('saved to', outputfile)
+
+end = datetime.datetime.now()
+
+print('start:', start)
+print('end:', end)
