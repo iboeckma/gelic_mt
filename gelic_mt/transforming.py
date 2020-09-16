@@ -53,44 +53,91 @@ def transform_imprint(imprint_datafields):
 
 # -------------------------------------------- #
 
-# returns the separated intellectual and automatic subjects as lists of dicts
+# returns the separated subjects (subject_auto, subject_partially_auto, subject_int, subject_culturegraph, subject_not_sorted, subject_maybe_int) as lists of dicts
 # each subject term is in a dict with the preferred name and the id
-# in case of the automatic subject terms there is also the confidence value and when the subject term was assigned
+# in case of the subject terms with an provenance info dict there is also the date when the subject term was assigned and the confidence value if it's a automatic subject
 
-def transform_subject_lib(subject_lib_datafields, subject_auto_info_datafields):
+def transform_subject_lib(subject_lib_datafields, subject_info_datafields):
+    def transform_single_subject_dict(subject, datafield_dict, info_dict):
+        if 'a' in datafield_dict: subject['subject_pref'] = '; '.join(datafield_dict['a'])
+        if '0' in datafield_dict: subject['subject_id'] = datafield_dict['0'][0]
+        if 'c' in info_dict: subject['subject_conf'] = '; '.join(info_dict['c'])
+        if 'd' in info_dict: subject['subject_crea'] = '; '.join(info_dict['d'])
+        if 'a' in info_dict: subject['subject_generation_process'] = '; '.join(info_dict['a'])
+
     subject_auto = []
+    subject_partially_auto = []
     subject_int = []
+    subject_maybe_int = []
+    subject_culturegraph = []
+    subject_not_sorted = []
+
 
     if subject_lib_datafields:
         for datafield_dict in subject_lib_datafields:
             
-            # at the moment (2020-09-14) only auto subjects have the datafield_dict key '8'
             try:
                 datafield_dict['8']
                 subject = {}
-                for info_dict in subject_auto_info_datafields: 
+                for info_dict in subject_info_datafields: 
                     for k, v in info_dict.items():
                         # if the value of info_dict is the same as the value of the datafield dict with key 8,
                         # then the information of info_dict fits the subject of datafield_dict
+
                         if v == datafield_dict['8']:
-                            if 'a' in datafield_dict: subject['subject_auto_pref'] = '; '.join(datafield_dict['a'])
-                            if '0' in datafield_dict: subject['subject_auto_id'] = datafield_dict['0'][0]
-                            if 'c' in info_dict: subject['subject_auto_conf'] = '; '.join(info_dict['c'])
-                            if 'd' in info_dict: subject['subject_auto_crea'] = '; '.join(info_dict['d'])
-                if subject: subject_auto.append(subject)
+                            ind1 = str(' '.join(info_dict['ind1']))
+                            code_a = str(' '.join(info_dict['a']))
+                            if ind1 == '0':
+                                transform_single_subject_dict(subject, datafield_dict, info_dict)
+                                if subject: subject_auto.append(subject)
+                                #print('maschinell:', subject, '\n')
+
+                            elif ind1 == '1':
+                                transform_single_subject_dict(subject, datafield_dict, info_dict)
+                                if subject: subject_partially_auto.append(subject)
+                                #print('teilweise maschinell:', subject, '\n')
+
+                            elif ind1 == '2':
+                                transform_single_subject_dict(subject, datafield_dict, info_dict)
+                                if subject: subject_int.append(subject)
+                                #print('intellektuell:', subject, '\n')
+                            
+                            elif code_a == 'cgwrk':
+                                transform_single_subject_dict(subject, datafield_dict, info_dict)
+                                if subject: subject_culturegraph.append(subject)
+                                #print('culturegraph:', subject, '\n')
+
+                            # old codes should be removed completely by 2021
+                            elif code_a == 'maschinell':
+                                transform_single_subject_dict(subject, datafield_dict, info_dict)
+                                if subject: subject_auto.append(subject)
+                            
+                            else:
+                                transform_single_subject_dict(subject, datafield_dict, info_dict)
+                                if subject: subject_not_sorted.append(subject)
+                                #print('not sorted:', subject, '\n')        
             
-            # int_subject
+            # no preovenance data for the subject, should be an intellectual subject most of the time (?)
             except KeyError:
                 subject = {}
-                if 'a' in datafield_dict: subject['subject_int_pref'] = '; '.join(datafield_dict['a'])
-                if '0' in datafield_dict: subject['subject_int_id'] = datafield_dict['0'][0]
-                if subject: subject_int.append(subject)
+                if 'a' in datafield_dict: subject['subject_pref'] = '; '.join(datafield_dict['a'])
+                if '0' in datafield_dict: subject['subject_id'] = datafield_dict['0'][0]
+                if subject: subject_maybe_int.append(subject)
+                #print('not_sorted:', subject, '\n')
     
+    # if there are automatic subjects it should be save to assume that the fields without provenance are int subjects (?)
+    if subject_auto: subject_int += subject_maybe_int
+    #else: subject_not_sorted += subject_maybe_int -> to change with next data release (?)
+
     # remove duplicates
     if subject_auto: subject_auto = [dict(t) for t in {tuple(d.items()) for d in subject_auto}]
+    if subject_partially_auto: subject_partially_auto = [dict(t) for t in {tuple(d.items()) for d in subject_partially_auto}]
     if subject_int: subject_int = [dict(t) for t in {tuple(d.items()) for d in subject_int}]
+    if subject_culturegraph: subject_culturegraph = [dict(t) for t in {tuple(d.items()) for d in subject_culturegraph}]
+    if subject_not_sorted: subject_not_sorted = [dict(t) for t in {tuple(d.items()) for d in subject_not_sorted}]
+    if subject_maybe_int: subject_maybe_int = [dict(t) for t in {tuple(d.items()) for d in subject_maybe_int}]
 
-    return(subject_auto, subject_int)
+    return(subject_auto, subject_partially_auto, subject_int, subject_culturegraph, subject_not_sorted, subject_maybe_int)
 
 # -------------------------------------------- #
 

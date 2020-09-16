@@ -4,8 +4,7 @@ from lxml import etree
 import json, re, os
 from gelic_mt import decoding, transforming, encoding
 
-infile = "data/test_corpus.xml"
-#infile = "data/test_dnb_all_dnbmarc_20200213-1.mrc.xml"
+infile = 'data/test_input.xml'
 
 with open("data/test_transformed_corpus.json", "w") as f:  # open our file for writing
     f.write("[")  # begin a JSON array
@@ -24,7 +23,7 @@ with open("data/test_transformed_corpus.json", "w") as f:  # open our file for w
         lang = decoding.get_lang(record)
         series = decoding.get_series(record)
         notes = decoding.get_notes(record)
-        subject_lib_datafields, subject_auto_info_datafields = decoding.get_subject_lib(record)
+        subject_lib_datafields, subject_info_datafields = decoding.get_subject_lib(record)
         subject_vlb_list = decoding.get_subject_vlb(record)
         ddc_notation_datafields = decoding.get_ddc_notation(record)
         
@@ -43,7 +42,7 @@ with open("data/test_transformed_corpus.json", "w") as f:  # open our file for w
         # (lang)
         # (series)
         # (notes)
-        subject_auto, subject_int = transforming.transform_subject_lib(subject_lib_datafields, subject_auto_info_datafields)
+        subject_auto, subject_partially_auto, subject_int, subject_culturegraph, subject_not_sorted, subject_maybe_int = transforming.transform_subject_lib(subject_lib_datafields, subject_info_datafields)
         subject_vlb = transforming.transform_subject_vlb(subject_vlb_list)
         ddc_subject_category, ddc_short_number, ddc_full_number = transforming.transform_ddc_notation(ddc_notation_datafields)
 
@@ -51,26 +50,30 @@ with open("data/test_transformed_corpus.json", "w") as f:  # open our file for w
 
 
         # encoding
-        transformed_record = {'collection' : 'dnb'}
+        transformed_record = {'collection_s' : 'dnb'}
         if dnb_id: transformed_record['id'] = encoding.encode(dnb_id)
-        if contenttype: transformed_record['contenttype'] = encoding.encode(contenttype)
-        if author: transformed_record['author'] = encoding.encode(author)
-        if editor: transformed_record['editor'] = encoding.encode(editor)
-        if title: transformed_record['title'] = encoding.encode(title)
-        if edition: transformed_record['edition'] = encoding.encode(edition)
-        if imprint: transformed_record['imprint'] = encoding.encode(imprint)
-        if extent: transformed_record['extent'] = encoding.encode(extent)
-        if isbn: transformed_record['isbn'] = encoding.encode(isbn)
-        if issn: transformed_record['issn'] = encoding.encode(issn)
-        if lang: transformed_record['lang'] = encoding.encode(lang)
-        if series: transformed_record['series'] = encoding.encode(series)
-        if notes: transformed_record['notes'] = encoding.encode(notes)
-        if subject_auto: transformed_record['subject_auto'] = encoding.encode(subject_auto)
-        if subject_int: transformed_record['subject_int'] = encoding.encode(subject_int)
-        if subject_vlb: transformed_record['subject_vlb'] = encoding.encode(subject_vlb)
-        if ddc_subject_category: transformed_record['ddc_subject_category'] = encoding.encode(ddc_subject_category)
-        if ddc_short_number: transformed_record['ddc_short_number'] = encoding.encode(ddc_short_number)
-        if ddc_full_number: transformed_record['ddc_full_number'] = encoding.encode(ddc_full_number)
+        if contenttype: transformed_record['contenttype_ss'] = encoding.encode(contenttype)
+        if author: transformed_record['author_ss'] = encoding.encode(author)
+        if editor: transformed_record['editor_ss'] = encoding.encode(editor)
+        if title: transformed_record['title_txt_de'] = encoding.encode(title)
+        if edition: transformed_record['edition_ss'] = encoding.encode(edition)
+        if imprint: transformed_record['imprint_ss'] = encoding.encode(imprint)
+        if extent: transformed_record['extent_ss'] = encoding.encode(extent)
+        if isbn: transformed_record['isbn_ss'] = encoding.encode(isbn)
+        if issn: transformed_record['issn_ss'] = encoding.encode(issn)
+        if lang: transformed_record['lang_ss'] = encoding.encode(lang)
+        if series: transformed_record['series_ss'] = encoding.encode(series)
+        if notes: transformed_record['notes_ss'] = encoding.encode(notes)
+        if subject_auto: transformed_record['subject_auto_txt_de'] = encoding.encode(subject_auto)
+        if subject_partially_auto: transformed_record['subject_partially_auto_txt_de'] = encoding.encode(subject_partially_auto)
+        if subject_int: transformed_record['subject_int_txt_de'] = encoding.encode(subject_int)
+        if subject_culturegraph: transformed_record['subject_culturegraph_txt_de'] = encoding.encode(subject_culturegraph)
+        if subject_not_sorted: transformed_record['subject_not_sorted_txt_de'] = encoding.encode(subject_not_sorted)
+        if subject_maybe_int: transformed_record['subject_maybe_int_txt_de'] = encoding.encode(subject_maybe_int)
+        if subject_vlb: transformed_record['subject_vlb_txt_de'] = encoding.encode(subject_vlb)
+        if ddc_subject_category: transformed_record['ddc_subject_category_ss'] = encoding.encode(ddc_subject_category)
+        if ddc_short_number: transformed_record['ddc_short_number_ss'] = encoding.encode(ddc_short_number)
+        if ddc_full_number: transformed_record['ddc_full_number_ss'] = encoding.encode(ddc_full_number)
     
 
         #print(transformed_record)
