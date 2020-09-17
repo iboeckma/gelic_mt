@@ -1,5 +1,5 @@
 # German Library Indexing Collection MARCXML Tools
-GeLIC MT provides modules that help with _downloading_, _filtering_, _decoding_, _transforming_ and _encoding_ __MARCXML__ data of the __German National Library (DNB)__. The modules are best used with the incremental parser of __[lxml](https://lxml.de/)__. The package was designed for building a pipeline for the project __[German Library Indexing Collection (GeLIC)](https://github.com/irgroup/gelic)__. A specific need of this collection is for example the seperation of _automatically indexed_ (by software) and _intellectually indexed_ (by a librarian) subject terms.
+GeLIC MT provides modules that help with _downloading_, _filtering_, _decoding_, _transforming_ and _encoding_ __MARCXML__ data of the __German National Library (DNB)__. The modules are best used with the incremental parser of __[lxml](https://lxml.de/)__. The package was designed for building a pipeline for the project __[German Library Indexing Collection (GeLIC)](https://github.com/irgroup/gelic)__. A specific need of this collection is for example the seperation of _automatically indexed_ (by software) and _intellectually indexed_ (by a librarian) subject terms. 
 
 ## Table of Contents
 - [Get started](#get-started)
@@ -49,7 +49,7 @@ __`test_decode-transform-encode.py`__<br />
 Decodes, transforms and encodes the records of `data/test_input.xml.zip`. Results in `data/test_transformed.json`.
 
 #### Example: GeLIC
-The current pipeline for the GeLIC testcollection can be found in `example/gelic-pipeline.py`. It's mostly a merged version of the `tests/` scripts.
+The current pipeline for the GeLIC testcollection can be found in `example/gelic-pipeline.py`. It's mostly a merged version of the `tests/` scripts. You'll need the first version of the GeLIC corpus (https://github.com/irgroup/gelic/tree/master/components) for it to work.
 
 #### Building your own Pipeline
 For writing your own pipeline you could start with the following:
