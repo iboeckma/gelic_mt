@@ -1,20 +1,25 @@
-# German Library Indexing Collection MARCXML Tools (GeLIC MT)
-GeLIC MT provides modules that help with _downloading_, _filtering_, _decoding_, _transforming_ and _encoding_ __MARCXML__ data of the __German National Library (DNB)__. The modules are relying on the library __[lxml](https://lxml.de/)__. The package was designed for building a pipeline for the project __[German Library Indexing Collection (GeLIC)](https://github.com/irgroup/gelic)__. A specific need of this collection is for example the seperation of automatically indexed (by software) and intellectually indexed (by a librarian) subject terms.
+# German Library Indexing Collection MARCXML Tools
+GeLIC MT provides modules that help with _downloading_, _filtering_, _decoding_, _transforming_ and _encoding_ __MARCXML__ data of the __German National Library (DNB)__. The modules are relying on the library __[lxml](https://lxml.de/)__. The package was designed for building a pipeline for the project __[German Library Indexing Collection (GeLIC)](https://github.com/irgroup/gelic)__. A specific need of this collection is for example the seperation of __automatically indexed__ (by software) and __intellectually indexed__ (by a librarian) subject terms.
 
 ### Table of Content
-1. [How to install](#how-to-install)
-2. [How to get started](#how-to-get-started)
-3. [Downloading](#downloading) 
-4. [Filtering](#filtering)
-5. [Decoding](#decoding)
-   - [controlfields](#controlfields)
-   - [datafields](#datafields)
-   - [subfileds](#subfields)
-6. [Transforming](#transforming)
-7. [Encoding](#encoding)
+- [Get started](#get-started)
+   - [Installation](#installation)
+   - [Usage](#usage)
+   - [Example: GeLIC](#example-gelic)
+   - [Building your own Pipeline](#building-your-own-pipeline)
+- [Modules](#modules)
+   - [Downloading](#downloading) 
+   - [Filtering](#filtering)
+   - [Decoding](#decoding)
+      - [controlfields](#controlfields)
+      - [datafields](#datafields)
+      - [subfields](#subfields)
+   - [Transforming](#transforming)
+   - [Encoding](#encoding)
 
-## How to install
-First, clone the repo and change into the directory of the repository:
+## Get started
+### Installation
+After cloning the repository, change into it's directory:
 ```
 git clone https://github.com/iboeckma/gelic_mt.git
 cd gelic_mt
@@ -25,13 +30,19 @@ pip install .
 pip install -r requirements.txt
 ```
 
-## How to get started
-There are a few test scripts in /tests. After following the instructions of [How to install](#how-to-install) the scripts are executable. They can offer you some examples on how to work with the modules:
-- `test_downloading.py`: downloads and verifies the newest marcxml files of https://data.dnb.de/DNB/
-- `test_filter_by_id.py`: extracts ids of an example file to then compare the ids and extract the corresponding records of another file. The extraction of the ids is specific to the structure of the first version of the gelic-corpus; results in `data/test_filtered-by-id.xml`
-- `test_filter_no_fiction_but_subject.py`: filters out fiction and school textbooks records as well as records without subjects that were assigned by the DNB of `data/test_input.xml`; results in `data/test_filtered.xml`
-- `test_decode-transform-encode.py`: decodes, transforms and encodes the records of `data/test_corpus.xml`
+### Usage
+#### Tests
+There are a few scripts in `tests/` which are used in development but can also help to get to know the modules. After installing the package the scripts are executable in the folder `tests/`.
 
+- `test_downloading.py`: Downloads and verifies the newest MARCXML files of https://data.dnb.de/DNB/.
+- `test_filter-by-id.py`: Extracts IDs of `data/test_ids-to-extract.xml.zip` to then compare the IDs and extract the corresponding records of the file `data/test_input.xml.zip`. The extraction of the ids is specific to the structure of the first version of the gelic-corpus. Results in `data/test_filtered-by-id.xml`
+- `test_filter-by-ddc-and-subject.py`: Filters out fiction titles as well as records without subjects that were assigned by the DNB of `data/test_input.xml.zip`. Results in `data/test_filtered-by-ddcs-and-subject.xml`.
+- `test_decode-transform-encode.py`: Decodes, transforms and encodes the records of `data/test_input.xml.zip`.
+
+#### Example: GeLIC
+
+
+#### Building your own Pipeline
 So for writing your own pipeline you might want to start with the following:
 ```
 from lxml import etree
@@ -60,26 +71,26 @@ for event, record in etree.iterparse(infile, tag="{http://www.loc.gov/MARC21/sli
   while record.getprevious() is not None:
     del record.getparent()[0]
 ```
-
-## Downloading
+## Modules
+### Downloading
 Three basic methods that scrape the MARCXML files of the [dnb website](https://data.dnb.de/DNB/) and verify the download: 
 1. `download()` - tries to download a file if it doesn't exist in the wanted directory 
 2. `create_checksum_dict()` - needs a file which is structured like the checksum-file which the DNB provides on their website; creates a dictionary with the filename as key and the sha256_hash as value
 3. `checkhash()` - if a checksum dictionary was created, the corresponding files can be verified after download
 
-## Filtering
+### Filtering
 There are three methods which can be helpful for filtering the data.
 1. `check_if_subject(record)` - returns `True` if a record was already subject indexed by a librarian or machine
 2. `bool_match(values_to_match_with, values_to_match_on)` - compare two lists, if one value matches return `True`; which can be useful for filtering out specific subject categories like `B` for fiction
 3. `get_id_list` - is a method for creating a list of all ids of the old corpus of GeLIC to search the new data with these ids
 
-## Decoding
+### Decoding
 Three main methods provide access to the different levels of a MARCXML: <br/> 
 __get_controlfields()__, __get_datafields()__ and __get_subfields()__
 
 Methods like `get_author()` use these functions with the specific rules for them, e.g. for author: When there is no field `100`, look for editors in field `700`. If no editor is found, look for an organisation in field `110`. The other methods are: `get_id()`, `get_contenttype()`, `get_editor()`, `get_title()`, `get_edition()`, `get_imprint()`, `get_extent()`, `get_isbn()`, `get_issn`, `get_lang()`, `get_series()`, `get_notes()`, `get_lib_subject()`, `get_pub_subject()` and `get_ddc_notation()`
 
-### controlfields
+#### controlfields
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
   <record xmlns="http://www.loc.gov/MARC21/slim" type="Bibliographic">
@@ -91,7 +102,7 @@ Methods like `get_author()` use these functions with the specific rules for them
 ```
 __`get_controlfield(record, '001')`__ -> returns the value of the first controlfield with the wanted tag as string: `'1200497457'`
 
-### datafields
+#### datafields
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
   <record xmlns="http://www.loc.gov/MARC21/slim" type="Bibliographic">
@@ -139,22 +150,22 @@ __`get_datafields(record, '700')`__ -> returns a list of dicts; every dictionary
   }]
 ```
 
-### subfields
+#### subfields
 __`get_subfields(record, '700, 'a')`__ -> returns all values of all subfields with the code `a` of the datafields with the tag `700`: `['Glaab, Manuela', 'Hering, Hendrik']`
 
-## Transforming
+### Transforming
 - at the moment there are seven methods for transforming the data
 - IDs with the prefix (DE-588) are the preferred choice when choosing an id out of a list
 
 methods: `transform_to_string()`, `transform_person()`, `transform_title()`, `transform_imprint()`, `transform_lib_subject()`, `transform_subject_pub()`, `transform_ddc_notation()`
 
-### example: transform_person()
+#### example: transform_person()
 returns a list of dicts: a dict contains the name of the person and an id if possible
 
 `transform_person(person_datafields, role = 'editor')` <br/> 
 -> `[{ 'editor_name' : 'Glaab, Manuela', 'editor_id' : '(DE-588)113094744'}, {'editor_name' : 'Hering, Hendrik'}]`
 
-### example: transform_ddc_notation()
+#### example: transform_ddc_notation()
 - returns the lists of dictionaries: ddc_subject_category, ddc_short_number, ddc_full_number
 - the values are assigned by using regex to one of the lists
 
@@ -162,7 +173,7 @@ returns a list of dicts: a dict contains the name of the person and an id if pos
 -> `ddc_subject_category` = `[{'ddc_notation' : '550', 'ddc_provenance' : '22sdnb'},{'ddc_notation' : '796', 'ddc_provenance' : '22sdnb'}]` <br/> 
 -> `ddc_full_number` = `[{'ddc_notation' : '551.57848', 'ddc_provenance' : '22/ger'}]`
  
-## Encoding
+### Encoding
 pass a value: str / list of strings / list of dicts
 - string or a list of strings: return the passed value
 - list of dicts: return a list of strings -> each string contains the values of a dict, separated by ' -- '
