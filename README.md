@@ -1,5 +1,5 @@
 # German Library Indexing Collection MARCXML Tools
-GeLIC MT provides modules that help with _downloading_, _filtering_, _decoding_, _transforming_ and _encoding_ __MARCXML__ data of the __German National Library (DNB)__. The modules are best used with the incremental parser of the library __[lxml](https://lxml.de/)__. The package was designed for building a pipeline for the project __[German Library Indexing Collection (GeLIC)](https://github.com/irgroup/gelic)__. A specific need of this collection is for example the seperation of _automatically indexed_ (by software) and _intellectually indexed_ (by a librarian) subject terms.
+GeLIC MT provides modules that help with _downloading_, _filtering_, _decoding_, _transforming_ and _encoding_ __MARCXML__ data of the __German National Library (DNB)__. The modules are best used with the incremental parser of __[lxml](https://lxml.de/)__. The package was designed for building a pipeline for the project __[German Library Indexing Collection (GeLIC)](https://github.com/irgroup/gelic)__. A specific need of this collection is for example the seperation of _automatically indexed_ (by software) and _intellectually indexed_ (by a librarian) subject terms.
 
 ## Table of Contents
 - [Get started](#get-started)
@@ -37,10 +37,10 @@ pip install -r requirements.txt
 There are a few scripts in `tests/` which are used in development but can also help to get to know the modules. After installing the package the scripts are executable in the folder `tests/`.
 
 __`test_downloading.py`__<br />
-Downloads and verifies the newest MARCXML files of https://data.dnb.de/DNB/.
+Downloads and verifies the newest MARCXML files of the DNB [data shop](https://data.dnb.de/DNB/).
 
 __`test_filter-by-id.py`__<br />
-Extracts IDs of `data/test_ids-to-extract.xml.zip` to then compare the IDs and extract the corresponding records of the file `data/test_input.xml.zip`. Results in `data/test_filtered-by-id.xml`
+Extracts IDs of `data/test_ids-to-extract.xml.zip` to then compare the IDs and extract the corresponding records of the file `data/test_input.xml.zip`. Results in `data/test_filtered-by-id.xml`.
 
 __`test_filter-by-ddc-and-subject.py`__<br />
 Filters out fiction titles as well as records without subjects that were assigned by the DNB of `data/test_input.xml.zip`. Results in `data/test_filtered-by-ddcs-and-subject.xml`.
@@ -84,7 +84,7 @@ for event, record in etree.iterparse(infile, tag="{http://www.loc.gov/MARC21/sli
 
 ## Modules
 ### Downloading
-Three basic methods that download the MARCXML files of the [DNB website](https://data.dnb.de/DNB/) and verify the download: 
+Three basic methods that download the MARCXML files of the DNB [data shop](https://data.dnb.de/DNB/) and verify the download: 
 
 __`download(url, file, dir_path)`__<br />
 Tries to download a file if it doesn't exist in the requested directory.
@@ -105,7 +105,7 @@ __`bool_match(values_to_match_with, values_to_match_on)`__<br />
 Compare two lists, if one value matches return `True`. As an example this can be useful for filtering out specific subject categories / DDCs like `B` for fiction.
 
 __`get_id_list(filepath)`__<br /> 
-A method for extracting a list of all ids of a file. The file has to have a XML-structure like the first version of the GeLIC corpus. This file is provided in the repository of [GeLIC](https://github.com/irgroup/gelic). The list can then be used to extract the corresponding records of another file.
+A method for extracting a list of all ids of a file. The file has to have a XML-structure like the first version of the GeLIC corpus. This file is provided in the repository of [GeLIC](https://github.com/irgroup/gelic/tree/master/components). The list can then be used to extract the corresponding records of another file.
 
 ### Decoding
 Three main methods provide access to the different levels of a MARCXML: __`get_controlfields(record, wanted_tag)`__, __`get_datafields(record, wanted_tag)`__ and __`get_subfields(record, wanted_tag, wanted_code)`__
@@ -162,7 +162,7 @@ Returns the value of the first controlfield with the wanted tag as string: `'120
 ```
 
 __`get_datafields(record, '700')`__<br />
-Returns a list of dictionaries. Each dictionary is a representation of a field with the tag `700`. The subfield-codes are saved as keys, the subfield-values are saved as the corresponding values. Indicators are treated like subfields.
+Returns a list of dictionaries. Each dictionary is a representation of a field with the tag `700`. The subfield-codes are saved as keys, the subfield-values are saved as the corresponding values. Indicators are treated as subfields.
 
 ```
 [{
@@ -221,7 +221,7 @@ __`ddc_full_number`__
 ```
  
 ### Encoding
-The passed value is encoded to the following structures. Strings or the strings of a list of strings are transformed from NFD to NFC but otherwise returned as they are passed. List of dictionaries are returned as a list of strings. Each string contains the values of a dictionary, separated by ' -- '. The strings are also transformed from NFD to NFC.
+The passed value is encoded to the following structures. Strings or the strings of a list of strings are transformed from NFD to NFC but otherwise returned as they are passed. List of dictionaries are returned as a list of strings. Each string contains the values of a dictionary, separated by ' -- ' and is transformed from NFD to NFC.
 
 __Example: `encode(editors)`__<br/>
 ```
