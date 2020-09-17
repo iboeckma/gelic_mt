@@ -1,12 +1,13 @@
 # German Library Indexing Collection MARCXML Tools
 GeLIC MT provides modules that help with _downloading_, _filtering_, _decoding_, _transforming_ and _encoding_ __MARCXML__ data of the __German National Library (DNB)__. The modules are relying on the library __[lxml](https://lxml.de/)__. The package was designed for building a pipeline for the project __[German Library Indexing Collection (GeLIC)](https://github.com/irgroup/gelic)__. A specific need of this collection is for example the seperation of __automatically indexed__ (by software) and __intellectually indexed__ (by a librarian) subject terms.
 
-### Table of Content
+## Table of Contents
 - [Get started](#get-started)
    - [Installation](#installation)
    - [Usage](#usage)
-   - [Example: GeLIC](#example-gelic)
-   - [Building your own Pipeline](#building-your-own-pipeline)
+      - [Tests](#tests)
+      - [Example: GeLIC](#example-gelic)
+      - [Building your own Pipeline](#building-your-own-pipeline)
 - [Modules](#modules)
    - [Downloading](#downloading) 
    - [Filtering](#filtering)
@@ -34,17 +35,25 @@ pip install -r requirements.txt
 #### Tests
 There are a few scripts in `tests/` which are used in development but can also help to get to know the modules. After installing the package the scripts are executable in the folder `tests/`.
 
-- `test_downloading.py`: Downloads and verifies the newest MARCXML files of https://data.dnb.de/DNB/.
-- `test_filter-by-id.py`: Extracts IDs of `data/test_ids-to-extract.xml.zip` to then compare the IDs and extract the corresponding records of the file `data/test_input.xml.zip`. The extraction of the ids is specific to the structure of the first version of the gelic-corpus. Results in `data/test_filtered-by-id.xml`
-- `test_filter-by-ddc-and-subject.py`: Filters out fiction titles as well as records without subjects that were assigned by the DNB of `data/test_input.xml.zip`. Results in `data/test_filtered-by-ddcs-and-subject.xml`.
-- `test_decode-transform-encode.py`: Decodes, transforms and encodes the records of `data/test_input.xml.zip`.
+__`test_downloading.py`__<br />
+Downloads and verifies the newest MARCXML files of https://data.dnb.de/DNB/.
+
+__`test_filter-by-id.py`__<br />
+Extracts IDs of `data/test_ids-to-extract.xml.zip` to then compare the IDs and extract the corresponding records of the file `data/test_input.xml.zip`. The extraction of the ids is specific to the structure of the first version of the gelic-corpus. Results in `data/test_filtered-by-id.xml`
+
+__`test_filter-by-ddc-and-subject.py`__ 
+Filters out fiction titles as well as records without subjects that were assigned by the DNB of `data/test_input.xml.zip`. Results in `data/test_filtered-by-ddcs-and-subject.xml`.
+
+__`test_decode-transform-encode.py`__
+Decodes, transforms and encodes the records of `data/test_input.xml.zip`. Results in `data/test_transformed.json`.
 
 #### Example: GeLIC
-
+The current pipeline for the GeLIC testcollection can be found in `example/gelic-pipeline.py`. It's mostly a merged version of the `tests/` scripts.
 
 #### Building your own Pipeline
-So for writing your own pipeline you might want to start with the following:
-```
+For writing your own pipeline you could start with the following:
+
+```python
 from lxml import etree
 from gelic_mt import decoding, transforming, encoding
 
@@ -55,21 +64,22 @@ for event, record in etree.iterparse(infile, tag="{http://www.loc.gov/MARC21/sli
   record_id = decoding.get_id(record)
   title_main, title_remainder = decoding.get_title(record)
   
-  # transform something like the title
-  title = transforming.transform_title(title_main, title_remainder) # merges the title, separated by ' : '
+  # transform something like the title (merges the title, separated by ' : ')
+  title = transforming.transform_title(title_main, title_remainder)
   
   # encode it
-  transformed_record = {}
+  transformed_record = {'collection' : 'test'}
   if record_id: transformed_record['id'] = encoding.encode(record_id)
   if title: transformed_record['title'] = encoding.encode(title)
   
   print(transformed_record)
   
-  # make sure that your memory doesn't blow up:
+  # make sure that your memory doesn't blow up
+  
   record.clear()
   
-  while record.getprevious() is not None:
-    del record.getparent()[0]
+  while record.getprevious() is not None: 
+      del record.getparent()[0]
 ```
 ## Modules
 ### Downloading
