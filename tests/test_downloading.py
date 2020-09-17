@@ -1,5 +1,5 @@
 # importing all needed libs
-import bs4, os, requests
+import bs4, os, requests, datetime
 from gelic_mt import downloading
 
 start = datetime.datetime.now()
