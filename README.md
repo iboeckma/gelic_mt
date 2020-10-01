@@ -49,7 +49,7 @@ __`test_decode-transform-encode.py`__<br />
 Decodes, transforms and encodes the records of `data/test_input.xml.zip`. Results in `data/test_transformed.json`.
 
 #### Example: GeLIC
-The current pipeline for the GeLIC testcollection can be found in `example/gelic-pipeline.py`. It's mostly a merged version of the `tests/` scripts. You'll need the first version of the GeLIC corpus (https://github.com/irgroup/gelic/tree/master/components) for it to work.
+The current pipeline for the GeLIC testcollection can be found in `example/gelic-pipeline.py`. It's mostly a merged version of the `tests/` scripts. You'll need the [first version](https://github.com/irgroup/gelic/tree/master/components) of the GeLIC corpus for it to work.
 
 #### Building your own Pipeline
 For writing your own pipeline you could start with the following:
@@ -205,25 +205,11 @@ Returns a list of dictionaries. A dictionary contains the name of the person and
 [{'editor_name' : 'Glaab, Manuela', 'editor_id' : '(DE-588)113094744'}, 
  {'editor_name' : 'Hering, Hendrik'}]
 ```
-
-__Example: `transform_ddc_notation(ddc_notation_datafields)`__ <br/> 
-Returns these lists of dictionaries: `ddc_subject_category`, `ddc_short_number`, `ddc_full_number`. The values are assigned to one of the lists by using regex. 
-
-__`ddc_subject_category`__
-```
-[{'ddc_notation' : '550', 'ddc_provenance' : '22sdnb'},
- {'ddc_notation' : '796', 'ddc_provenance' : '22sdnb'}]
-```
-
-__`ddc_full_number`__
-```
-[{'ddc_notation' : '551.57848', 'ddc_provenance' : '22/ger'}]
-```
  
 ### Encoding
 The passed value is encoded to the following structures. Strings or the strings of a list of strings are transformed from NFD to NFC but otherwise returned as they are passed. List of dictionaries are returned as a list of strings. Each string contains the values of a dictionary, separated by ' -- ' and is transformed from NFD to NFC.
 
-__Example: `encode(editors)`__<br/>
+__Example: `json_encode(editors)`__<br/>
 ```
 ['Glaab, Manuela -- (DE-588)113094744', 'Hering, Hendrik']`
 ```
