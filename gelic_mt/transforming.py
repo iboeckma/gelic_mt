@@ -40,7 +40,6 @@ def transform_imprint(imprint_datafields):
     imprints = []
     if imprint_datafields:
         for datafield_dict in imprint_datafields:
-            #print(datafield_dict['a'])
             imprint = {}
             if 'a' in datafield_dict: imprint['publication_place'] = '; '.join(datafield_dict['a'])
             if 'b' in datafield_dict: imprint['publisher'] = '; '.join(datafield_dict['b'])
@@ -57,21 +56,10 @@ def transform_imprint(imprint_datafields):
 # each subject term is in a dict with the preferred name and the id
 # in case of the subject terms with an provenance info dict there is also the date when the subject term was assigned and the confidence value if it's a automatic subject
 
-def transform_subject_lib(subject_lib_datafields, subject_info_datafields):
-    def transform_single_subject_dict(subject, datafield_dict, info_dict):
-        if 'a' in datafield_dict: subject['subject_pref'] = '; '.join(datafield_dict['a'])
-        if '0' in datafield_dict: subject['subject_id'] = datafield_dict['0'][0]
-        if 'c' in info_dict: subject['subject_conf'] = '; '.join(info_dict['c'])
-        if 'd' in info_dict: subject['subject_crea'] = '; '.join(info_dict['d'])
-        if 'a' in info_dict: subject['subject_generation_process'] = '; '.join(info_dict['a'])
-
+def transform_subject_lib(subject_lib_datafields, subject_provenance_datafields):
     subject_auto = []
-    subject_partially_auto = []
     subject_int = []
-    subject_maybe_int = []
-    subject_culturegraph = []
-    subject_not_sorted = []
-
+    subject_other = []
 
     if subject_lib_datafields:
         for datafield_dict in subject_lib_datafields:
@@ -79,65 +67,51 @@ def transform_subject_lib(subject_lib_datafields, subject_info_datafields):
             try:
                 datafield_dict['8']
                 subject = {}
-                for info_dict in subject_info_datafields: 
+                for info_dict in subject_provenance_datafields: 
                     for k, v in info_dict.items():
                         # if the value of info_dict is the same as the value of the datafield dict with key 8,
                         # then the information of info_dict fits the subject of datafield_dict
 
                         if v == datafield_dict['8']:
-                            ind1 = str(' '.join(info_dict['ind1']))
+
+                            if 'a' in datafield_dict: subject['subject_pref'] = '; '.join(datafield_dict['a'])
+                            if '0' in datafield_dict: subject['subject_id'] = datafield_dict['0'][0]
+                            if 'c' in info_dict: subject['subject_conf'] = '; '.join(info_dict['c'])
+                            if 'd' in info_dict: subject['subject_crea'] = '; '.join(info_dict['d'])
+                            if 'a' in info_dict: subject['subject_generation_process'] = '; '.join(info_dict['a'])
+
+                            # https://wiki.dnb.de/display/ILTIS/Metadatenherkunft+in+der+DNB+und+in+MARC+883
                             code_a = str(' '.join(info_dict['a']))
-                            if ind1 == '0':
-                                transform_single_subject_dict(subject, datafield_dict, info_dict)
-                                if subject: subject_auto.append(subject)
-                                #print('maschinell:', subject, '\n')
+                            # k for keywords
+                            auto_k = ['maschinell gebildet', 'aepgnd', 'aep-gnd', 'aepgnd-pa', 'aep-gnd-pa', 'aeplcsh', 'aep-lcsh', 'aeplcsh-pa', 'aep-lcsh-pa']
+                            part_auto_k = ['gndddc','gnd-ddc','gndddc-pa','gnd-ddc-pa', 'maschinell aus Konkordanz gebildet']
+                            int_k = ['dnb', 'dnb-pa']
+                            # other_k could be seperated further
+                            other_k = ['cgrwk', 'cgrwk-pa', 'thesozgnd', 'thesoz-gnd', 'thesozgnd-pa', 'thesoz-gnd-pa' 'stwgnd', 'stw-gnd', 'stwgnd-pa', 'stw-gnd-pa', 'Übernahme aus paralleler Ausgabe']
 
-                            elif ind1 == '1':
-                                transform_single_subject_dict(subject, datafield_dict, info_dict)
-                                if subject: subject_partially_auto.append(subject)
-                                #print('teilweise maschinell:', subject, '\n')
-
-                            elif ind1 == '2':
-                                transform_single_subject_dict(subject, datafield_dict, info_dict)
-                                if subject: subject_int.append(subject)
-                                #print('intellektuell:', subject, '\n')
-                            
-                            elif code_a == 'cgwrk':
-                                transform_single_subject_dict(subject, datafield_dict, info_dict)
-                                if subject: subject_culturegraph.append(subject)
-                                #print('culturegraph:', subject, '\n')
-
-                            # old codes should be removed completely by 2021
-                            elif code_a == 'maschinell':
-                                transform_single_subject_dict(subject, datafield_dict, info_dict)
-                                if subject: subject_auto.append(subject)
-                            
-                            else:
-                                transform_single_subject_dict(subject, datafield_dict, info_dict)
-                                if subject: subject_not_sorted.append(subject)
-                                #print('not sorted:', subject, '\n')        
+                            if code_a in auto_k: subject_auto.append(subject)
+                            elif code_a in int_k: subject_int.append(subject)
+                            elif code_a in part_auto_k: subject_other.append(subject) # change to subject_auto / subject_partially_auto?
+                            elif code_a in other_k: subject_other.append(subject)
+                            else: subject_other.append(subject)        
             
-            # no preovenance data for the subject, should be an intellectual subject most of the time (?)
+            # no provenance data for the subject, should be an intellectual subject most of the time (?)
             except KeyError:
                 subject = {}
                 if 'a' in datafield_dict: subject['subject_pref'] = '; '.join(datafield_dict['a'])
                 if '0' in datafield_dict: subject['subject_id'] = datafield_dict['0'][0]
-                if subject: subject_maybe_int.append(subject)
-                #print('not_sorted:', subject, '\n')
+                if subject: subject_int.append(subject) # change to subject_maybe_int / subject_other in new release?
     
     # if there are automatic subjects it should be save to assume that the fields without provenance are int subjects (?)
-    if subject_auto: subject_int += subject_maybe_int
-    #else: subject_not_sorted += subject_maybe_int -> to change with next data release (?)
+    #if subject_auto: subject_int += subject_maybe_int
+    #else: subject_other += subject_maybe_int
 
     # remove duplicates
     if subject_auto: subject_auto = [dict(t) for t in {tuple(d.items()) for d in subject_auto}]
-    if subject_partially_auto: subject_partially_auto = [dict(t) for t in {tuple(d.items()) for d in subject_partially_auto}]
     if subject_int: subject_int = [dict(t) for t in {tuple(d.items()) for d in subject_int}]
-    if subject_culturegraph: subject_culturegraph = [dict(t) for t in {tuple(d.items()) for d in subject_culturegraph}]
-    if subject_not_sorted: subject_not_sorted = [dict(t) for t in {tuple(d.items()) for d in subject_not_sorted}]
-    if subject_maybe_int: subject_maybe_int = [dict(t) for t in {tuple(d.items()) for d in subject_maybe_int}]
+    if subject_other: subject_other = [dict(t) for t in {tuple(d.items()) for d in subject_other}]
 
-    return(subject_auto, subject_partially_auto, subject_int, subject_culturegraph, subject_not_sorted, subject_maybe_int)
+    return(subject_auto, subject_int, subject_other)
 
 # -------------------------------------------- #
 
@@ -185,4 +159,8 @@ def transform_ddc_notation(ddc_notation_datafields):
     # full numbers have 3 digits, followed by a period and two or more digits e.g. 303.6252970956
     ddc_full_number = add_ddc(ddc_notation_datafields, '\d\d\d\.\d\d+')
 
-    return(ddc_subject_category, ddc_short_number, ddc_full_number) 
+    ddc = ddc_subject_category
+    ddc += ddc_short_number
+    ddc += ddc_full_number
+
+    return(ddc) 

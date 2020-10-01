@@ -199,18 +199,19 @@ def get_notes(record):
 # the latter only has information for automatic terms at the moment
 
 def get_subject_lib(record):
-    # all tags between 600 and 655 except 653 (vlb = publisher) qualify as auto or int subjects
+    # all tags between 600 and 655 except 653 (vlb = publisher) but also 689 qualify as auto or int subjects
     set_without_vlb = set(range(600, 656)) - set([653])
+    set_without_vlb.add(689)
     
     subject_lib_datafields = []
     for tag in set_without_vlb:
         datafields = get_datafields(record, str(tag))
         if datafields: subject_lib_datafields.extend(datafields)
             
-    # 883 fields have information about auto subjects
-    subject_auto_info_datafields = get_datafields(record, '883')
+    # 883 fields have information about the provenance of subjects
+    subject_provenance_datafields = get_datafields(record, '883')
 
-    return(subject_lib_datafields, subject_auto_info_datafields)
+    return(subject_lib_datafields, subject_provenance_datafields)
 
 # -------------------------------------------- #
 

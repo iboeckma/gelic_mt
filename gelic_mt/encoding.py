@@ -8,7 +8,7 @@ import unicodedata
 # if it is a list of dicts, return a list of strings -> each string contains the values of a dict, separated by ' -- '
 # also, every string that is returned is transformed from nfd to nfc
 
-def encode(thing_to_encode):
+def json_encode(thing_to_encode):
     encoded_list = []
     if type(thing_to_encode) is list:
         for item in thing_to_encode:
